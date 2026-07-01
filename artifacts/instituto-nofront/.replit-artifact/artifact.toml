@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Instituto NoFront"
+version = "1.0.0"
+id = "artifacts/instituto-nofront"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23995
+
+[services.development]
+run = "pnpm --filter @workspace/instituto-nofront run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/instituto-nofront", "run", "build" ]
+publicDir = "artifacts/instituto-nofront/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23995"
+BASE_PATH = "/"

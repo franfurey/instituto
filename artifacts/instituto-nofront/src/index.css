@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-anton: 'Anton', sans-serif;
+
+  --color-brand-bg: hsl(45 20% 96%); /* #F6F5F2 */
+  --color-brand-preto: hsl(0 0% 7%); /* #121212 */
+  --color-brand-roxo: hsl(279 70% 46%); /* #8E24C8 */
+  --color-brand-orquidea: hsl(302 33% 50%); /* #A855A5 */
+  --color-brand-vermelho: hsl(11 70% 51%); /* #D94A2B */
+  --color-brand-vinho: hsl(342 73% 44%); /* #C21E4F */
+  --color-brand-dourado: hsl(36 75% 56%); /* #E2A03C */
+  --color-brand-laranja: hsl(12 87% 54%); /* #F04B21 */
+  --color-brand-amarelo: hsl(53 90% 65%); /* #F5E356 */
+}
+
+/* LIGHT MODE */
+:root {
+  --background: 45 20% 96%;
+  --foreground: 0 0% 7%;
+  --border: 0 0% 85%;
+  --card: 45 20% 96%;
+  --card-foreground: 0 0% 7%;
+  --card-border: 0 0% 85%;
+  
+  --popover: 45 20% 96%;
+  --popover-foreground: 0 0% 7%;
+  --popover-border: 0 0% 85%;
+  
+  --primary: 279 70% 46%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 0 0% 7%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 45 10% 90%;
+  --muted-foreground: 0 0% 40%;
+  
+  --accent: 302 33% 50%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 11 70% 51%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --input: 0 0% 85%;
+  --ring: 279 70% 46%;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 7%;
+  --foreground: 45 20% 96%;
+  --border: 0 0% 20%;
+  --card: 0 0% 7%;
+  --card-foreground: 45 20% 96%;
+  --card-border: 0 0% 20%;
+  
+  --popover: 0 0% 7%;
+  --popover-foreground: 45 20% 96%;
+  --popover-border: 0 0% 20%;
+  
+  --primary: 279 70% 46%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 45 20% 96%;
+  --secondary-foreground: 0 0% 7%;
+  
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;
+  
+  --accent: 302 33% 50%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 11 70% 51%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --input: 0 0% 20%;
+  --ring: 279 70% 46%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  body {
+    @apply font-sans antialiased bg-brand-bg text-brand-preto;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+}
+
+.font-anton {
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.pill-btn {
+  @apply rounded-full font-anton px-8 py-4 bg-brand-preto text-white inline-flex items-center justify-center transition-transform hover:-translate-y-0.5;
+}
+
+.pill-btn-branco {
+  @apply rounded-full font-anton px-8 py-4 bg-white text-brand-preto inline-flex items-center justify-center transition-transform hover:-translate-y-0.5;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 22s linear infinite;
+}
