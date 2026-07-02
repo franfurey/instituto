@@ -205,7 +205,7 @@ const Apoie = () => {
       <div className="absolute inset-0 bg-black/60 z-10"></div>
       
       <div className="relative z-20 container mx-auto flex flex-col items-center justify-center text-center">
-        <h2 className="font-anton text-white text-[12vw] md:text-[9rem] leading-[0.85] mb-12 drop-shadow-lg">
+        <h2 className="font-anton text-white text-[8.4vw] md:text-[6.3rem] leading-[0.85] mb-12 drop-shadow-lg">
           Apoie Mulheres<br/>Negras que<br/>Produzem Futuro
         </h2>
         
