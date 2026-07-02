@@ -125,7 +125,7 @@ const Pilares = () => {
         <h3 className="font-anton uppercase text-[#5A1189] break-words hover:scale-105 transition-transform origin-top-left cursor-default text-[30px]">
           Incidência<br/>Política
         </h3>
-        <p className="text-white max-w-sm text-[13px] md:text-xs text-left" data-testid="text-pilar-incidencia">
+        <p className="text-white max-w-sm md:text-xs text-left text-[14px]" data-testid="text-pilar-incidencia">
           Reposicionamos mulheres negras como protagonistas da formulação de políticas públicas, da produção de pensamento econômico e da transformação das estruturas de poder.
         </p>
       </div>
