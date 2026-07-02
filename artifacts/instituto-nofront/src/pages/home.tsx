@@ -192,7 +192,7 @@ const Apoie = () => {
   return (
     <section className="relative min-h-[100dvh] flex flex-col items-center justify-center p-8 md:p-16 overflow-hidden bg-[#5a4f52]">
       <video
-        className="absolute inset-0 w-full h-[115%] object-cover z-0 translate-y-[6%]"
+        className="absolute inset-0 w-full h-[145%] object-cover z-0 translate-y-[30%]"
         src={apoieBgVideo}
         poster={apoieBgPoster}
         autoPlay
