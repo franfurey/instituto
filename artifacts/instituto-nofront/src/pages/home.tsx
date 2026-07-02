@@ -106,7 +106,7 @@ const Repensar = () => {
           Repensar Economia,<br/>Garantir o Futuro.
         </h2>
         <div className="flex flex-col items-start gap-6">
-          <p className="text-base md:text-lg text-gray-700">
+          <p className="md:text-lg text-gray-700 text-[13px]">
             Da política monetária à economia do cuidado, enfrentamos os principais desafios econômicos do nosso tempo por meio de pesquisa crítica e aplicada, incidência política e fortalecimento de mulheres negras e do Sul Global.
           </p>
           <button className="pill-btn-sm gap-2" data-testid="btn-learn-more">
