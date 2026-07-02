@@ -168,11 +168,11 @@ const Stats = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2">
       <div className="bg-brand-bg p-12 md:p-24 flex flex-col justify-center gap-8">
-        <h2 className="font-anton text-4xl md:text-6xl leading-[1.1]">
+        <h2 className="font-anton text-3xl md:text-5xl leading-[1.1]">
           Pesquisa, incidência e educação para mover o futuro
         </h2>
-        <p className="text-xl text-gray-700 max-w-lg">
-          Nossa produção intelectual é a base para a construção de políticas públicas que impactam a vida das mulheres negras em todo o Brasil.
+        <p className="text-base text-gray-700 max-w-lg">
+          Fortalecemos a produção intelectual de mulheres negras e transformamos conhecimento em ação política, formação crítica e propostas concretas para enfrentar desigualdades raciais, de gênero e econômicas.
         </p>
       </div>
       
