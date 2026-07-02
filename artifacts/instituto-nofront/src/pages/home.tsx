@@ -102,15 +102,15 @@ const Repensar = () => {
   return (
     <section id="sobre" className="py-24 md:py-32 px-4 bg-brand-bg">
       <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
-        <h2 className="font-anton text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-left">
+        <h2 className="font-sans font-normal text-4xl md:text-5xl lg:text-6xl leading-[1.15] text-left text-brand-preto">
           Repensar Economia,<br/>Garantir o Futuro.
         </h2>
-        <div className="flex flex-col items-start gap-8">
-          <p className="text-lg md:text-xl text-gray-700">
-            Nossa atuação se baseia na convicção de que a economia não é neutra. Desenvolvemos metodologias, pesquisas e incidência política para construir alternativas reais baseadas na experiência de mulheres negras.
+        <div className="flex flex-col items-start gap-6">
+          <p className="text-base md:text-lg text-gray-700">
+            Da política monetária à economia do cuidado, enfrentamos os principais desafios econômicos do nosso tempo por meio de pesquisa crítica e aplicada, incidência política e fortalecimento de mulheres negras e do Sul Global.
           </p>
-          <button className="pill-btn gap-2" data-testid="btn-learn-more">
-            Learn More <ArrowUpRight className="w-5 h-5" />
+          <button className="pill-btn-sm gap-2" data-testid="btn-learn-more">
+            LEARN MORE <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>
       </div>

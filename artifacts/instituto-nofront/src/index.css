@@ -210,6 +210,10 @@
   @apply rounded-full font-anton px-8 py-4 bg-white text-brand-preto inline-flex items-center justify-center transition-transform hover:-translate-y-0.5;
 }
 
+.pill-btn-sm {
+  @apply rounded-full font-sans font-semibold tracking-wide text-xs px-5 py-3 bg-brand-preto text-white inline-flex items-center justify-center transition-transform hover:-translate-y-0.5;
+}
+
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
