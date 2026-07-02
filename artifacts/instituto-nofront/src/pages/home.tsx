@@ -133,7 +133,7 @@ const Pilares = () => {
         <h3 className="font-anton uppercase text-white break-words hover:scale-105 transition-transform origin-top-left cursor-default text-[30px]">
           Educação
         </h3>
-        <p className="text-gray-200 max-w-sm text-[13px] md:text-xs" data-testid="text-pilar-educacao">
+        <p className="text-gray-200 max-w-sm text-[14px]" data-testid="text-pilar-educacao">
           Por meio da educação, formamos e fortalecemos mulheres negras para ocupar o debate econômico e construir futuros mais justos.
         </p>
       </div>
@@ -141,7 +141,7 @@ const Pilares = () => {
         <h3 className="font-anton uppercase text-brand-dourado break-words hover:scale-105 transition-transform origin-top-left cursor-default text-[30px]">
           Pesquisa
         </h3>
-        <p className="text-white max-w-sm text-[13px] md:text-xs ml-[0px] mr-[0px]" data-testid="text-pilar-pesquisa">
+        <p className="text-white max-w-sm text-[14px] ml-[0px] mr-[0px]" data-testid="text-pilar-pesquisa">
           Desenvolvemos estudos e análises a partir da produção intelectual de economistas negras para promover justiça econômica e ampliar o debate sobre equidade racial no contexto do Sul Global.
         </p>
       </div>
