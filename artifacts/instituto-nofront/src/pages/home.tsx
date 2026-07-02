@@ -58,14 +58,13 @@ const Hero = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 min-h-[88vh]">
       {/* Left */}
-      <div className="bg-brand-roxo p-8 md:p-16 flex flex-col justify-end">
+      <div className="p-8 md:p-16 flex flex-col justify-end bg-[#68429a]">
         <h1 className="font-anton text-white text-[12vw] md:text-[8vw] leading-[0.9] break-words">
           Novos<br/>
           Futuros<br/>
           Econômicos
         </h1>
       </div>
-      
       {/* Right */}
       <div className="flex flex-col">
         {/* Right Top */}
