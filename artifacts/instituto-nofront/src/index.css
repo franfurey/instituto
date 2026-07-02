@@ -5,6 +5,56 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek Unicase';
+  src: url('/fonts/Ogonek-Unicase.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -41,7 +91,9 @@
   --color-destructive-border: var(--destructive-border);
 
   --font-sans: 'Inter', sans-serif;
-  --font-anton: 'Anton', sans-serif;
+  --font-anton: 'Ogonek', 'Anton', sans-serif;
+  --font-ogonek: 'Ogonek', 'Anton', sans-serif;
+  --font-ogonek-unicase: 'Ogonek Unicase', 'Anton', sans-serif;
 
   --color-brand-bg: hsl(45 20% 96%); /* #F6F5F2 */
   --color-brand-preto: hsl(0 0% 7%); /* #121212 */
