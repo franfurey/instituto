@@ -59,7 +59,7 @@ const Hero = () => {
     <section className="grid grid-cols-1 md:grid-cols-2 min-h-[88vh]">
       {/* Left */}
       <div className="p-8 md:p-16 flex flex-col justify-end bg-[#68429a]">
-        <h1 className="font-anton text-white text-[12vw] md:text-[8vw] leading-[0.9] break-words">
+        <h1 className="font-anton text-white md:text-[8vw] break-words text-[100px]">
           Novos<br/>
           Futuros<br/>
           Econômicos
