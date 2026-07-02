@@ -1,5 +1,13 @@
 import { Link } from "wouter";
 import { Globe, ArrowUpRight, ArrowLeft, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import manifestoHeroImg from "@assets/3a45098b-a9ea-46b5-ab54-bbe7ba51e987_1783028511227.png";
+import eixo1Img from "@assets/ChatGPT_Image_26_de_jun._de_2026,_17_22_18_(1)_1783028511242.png";
+import eixo2Img from "@assets/ChatGPT_Image_26_de_jun._de_2026,_17_22_18_(2)_1783028511244.png";
+import eixo3Img from "@assets/ChatGPT_Image_26_de_jun._de_2026,_17_22_19_(3)_1783028511245.png";
+import eixo4Img from "@assets/ChatGPT_Image_26_de_jun._de_2026,_17_22_19_(4)_1783028511245.png";
+import eixo5Img from "@assets/ChatGPT_Image_26_de_jun._de_2026,_17_22_19_(5)_1783028511244.png";
+import eixo6Img from "@assets/ChatGPT_Image_26_de_jun._de_2026,_17_22_20_(6)_1783028511244.png";
+import eixo7Img from "@assets/ChatGPT_Image_26_de_jun._de_2026,_17_22_20_(7)_1783028511244.png";
 
 const ManifestoHeader = () => {
   return (
@@ -76,27 +84,14 @@ const ManifestoFooter = () => {
 };
 
 export default function Manifesto() {
-  const principios = [
-    {
-      numero: "01",
-      titulo: "Mulheres negras no centro",
-      texto: "Acreditamos que mulheres negras devem ser protagonistas da produção de conhecimento econômico e da formulação de políticas públicas, não apenas objeto de estudo.",
-    },
-    {
-      numero: "02",
-      titulo: "Economia é justiça",
-      texto: "Não existe desenvolvimento econômico verdadeiro enquanto persistirem as desigualdades raciais e de gênero que estruturam nossa sociedade.",
-    },
-    {
-      numero: "03",
-      titulo: "Pesquisa crítica e aplicada",
-      texto: "Produzimos conhecimento que dialoga com a realidade, capaz de orientar decisões concretas de política pública e fortalecer o debate público.",
-    },
-    {
-      numero: "04",
-      titulo: "Sul Global em perspectiva",
-      texto: "Enfrentamos os desafios econômicos do nosso tempo a partir de uma leitura situada, que conecta as lutas do Brasil às do Sul Global.",
-    },
+  const eixos = [
+    { numero: 1, titulo: "Reparação econômica e institucional", img: eixo1Img, cor: "#C21E4F" },
+    { numero: 2, titulo: "Trabalho e renda", img: eixo2Img, cor: "#F04B21" },
+    { numero: 3, titulo: "Política macroeconômica e fiscal", img: eixo3Img, cor: "#3A8A3E" },
+    { numero: 4, titulo: "Dignidade", img: eixo4Img, cor: "#3956A8" },
+    { numero: 5, titulo: "Investimento público", img: eixo5Img, cor: "#5B3A29" },
+    { numero: 6, titulo: "Investimento privado", img: eixo6Img, cor: "#8A5A2E" },
+    { numero: 7, titulo: "Economia internacional", img: eixo7Img, cor: "#B08968" },
   ];
 
   return (
@@ -104,49 +99,68 @@ export default function Manifesto() {
       <ManifestoHeader />
 
       <main>
-        <section className="relative overflow-hidden bg-[#68429a] px-4 py-24 md:py-32">
-          <div className="container mx-auto max-w-5xl">
+        <section className="relative overflow-hidden bg-brand-preto">
+          <div className="container mx-auto">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-10"
+              className="absolute top-6 left-6 z-10 inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors bg-black/30 backdrop-blur px-4 py-2 rounded-full text-sm"
               data-testid="link-back-home"
             >
               <ArrowLeft className="w-4 h-4" /> Voltar
             </Link>
-            <span className="inline-block font-anton uppercase text-xs md:text-sm tracking-widest text-brand-amarelo mb-6">
-              Projetos / Manifesto
-            </span>
-            <h1 className="font-anton text-white text-4xl md:text-6xl lg:text-7xl leading-[1.05]">
-              Por uma economia que reconhece, repara e é liderada por mulheres negras
-            </h1>
+            <img
+              src={manifestoHeroImg}
+              alt="Manifesto Econômico da Marcha das Mulheres Negras"
+              className="w-full h-auto object-cover"
+              data-testid="img-manifesto-hero"
+            />
           </div>
         </section>
 
         <section className="px-4 py-20 md:py-28 bg-brand-bg">
           <div className="container mx-auto max-w-3xl flex flex-col gap-8">
+            <h1 className="font-anton text-3xl md:text-5xl leading-tight text-brand-preto">
+              Reparação como eixos da economia brasileira
+            </h1>
             <p className="text-xl md:text-2xl leading-relaxed text-brand-preto font-medium">
-              O Instituto NoFront nasce da convicção de que a economia não é neutra. Ela é construída, disputada e, historicamente, tem excluído as vozes de mulheres negras dos espaços de decisão sobre política monetária, fiscal e social.
+              O Manifesto Econômico da Marcha das Mulheres Negras foi construído em parceria com o Instituto NoFront. Ele reúne reivindicações, propostas e caminhos concretos para transformar a economia brasileira e, sobretudo, as condições de vida das mulheres negras.
             </p>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Este manifesto reúne os princípios que orientam nosso trabalho: pesquisa crítica e aplicada, incidência política e fortalecimento de mulheres negras e do Sul Global. Acreditamos que amplificar essas vozes é condição necessária para transformar as estruturas que produzem desigualdade.
+              Chamamos de "projeto" porque não se limita a enunciar demandas. Ele se propõe a projetar um novo marco para as relações econômicas no Brasil, reposicionando reparação e bem viver como eixos estruturantes de justiça racial e de gênero.
             </p>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Defendemos um futuro econômico onde justiça racial e justiça de gênero não sejam pautas paralelas, mas parte constitutiva de como pensamos, medimos e construímos desenvolvimento.
+              A Marcha das Mulheres Negras por Reparação e Bem Viver é um movimento político e social que reúne mulheres negras de todo o país no enfrentamento ao racismo, à violência e às desigualdades. Dez anos após levar mais de 10 mil mulheres a Brasília, voltamos às ruas em 25 de novembro de 2025, com ainda mais força e organização.
+            </p>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              É nesse contexto de mobilização e construção coletiva que damos vida ao nosso Manifesto Econômico.
             </p>
           </div>
         </section>
 
         <section className="bg-brand-preto px-4 py-20 md:py-28">
-          <div className="container mx-auto max-w-5xl">
+          <div className="container mx-auto max-w-6xl">
             <h2 className="font-anton text-white text-3xl md:text-5xl mb-16">
-              Nossos princípios
+              Os 7 eixos do manifesto
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-              {principios.map((p) => (
-                <div key={p.numero} className="flex flex-col gap-4" data-testid={`principio-${p.numero}`}>
-                  <span className="font-anton text-brand-amarelo text-2xl">{p.numero}</span>
-                  <h3 className="font-anton text-white text-2xl md:text-3xl">{p.titulo}</h3>
-                  <p className="text-white/70 leading-relaxed">{p.texto}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {eixos.map((e) => (
+                <div
+                  key={e.numero}
+                  className="rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex flex-col hover:-translate-y-1 transition-transform"
+                  data-testid={`eixo-card-${e.numero}`}
+                >
+                  <img
+                    src={e.img}
+                    alt={`Eixo ${e.numero}: ${e.titulo}`}
+                    className="w-full h-auto object-cover"
+                    data-testid={`img-eixo-${e.numero}`}
+                  />
+                  <div className="p-6 flex flex-col gap-1">
+                    <span className="font-anton text-sm tracking-widest" style={{ color: e.cor }}>
+                      EIXO {e.numero}
+                    </span>
+                    <h3 className="font-anton text-white text-xl md:text-2xl">{e.titulo}</h3>
+                  </div>
                 </div>
               ))}
             </div>
