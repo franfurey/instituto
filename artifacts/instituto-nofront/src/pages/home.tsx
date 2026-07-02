@@ -25,6 +25,17 @@ const Header = () => {
           <a href="#contato" className="hover:text-brand-roxo transition-colors" data-testid="nav-contact">Contact</a>
           <div className="relative group cursor-pointer">
             <span className="flex items-center gap-1 hover:text-brand-roxo transition-colors" data-testid="nav-projetos">Projetos <span className="text-xs">▼</span></span>
+            <div className="absolute left-0 top-full pt-2 hidden group-hover:block">
+              <div className="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[180px]">
+                <Link
+                  href="/projetos/manifesto"
+                  className="block px-4 py-2 text-sm hover:bg-brand-bg hover:text-brand-roxo transition-colors"
+                  data-testid="nav-projetos-manifesto"
+                >
+                  Manifesto
+                </Link>
+              </div>
+            </div>
           </div>
           <a href="#" className="hover:text-brand-roxo transition-colors" data-testid="nav-boletins">Boletins</a>
         </nav>
@@ -48,7 +59,7 @@ const Header = () => {
           <a href="#sobre" className="block py-2 text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>About</a>
           <a href="#insights" className="block py-2 text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</a>
           <a href="#contato" className="block py-2 text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-          <a href="#" className="block py-2 text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>Projetos</a>
+          <Link href="/projetos/manifesto" className="block py-2 text-lg font-medium" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-nav-manifesto">Manifesto</Link>
           <a href="#" className="block py-2 text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>Boletins</a>
           <button className="pill-btn w-full mt-4">Donate Now</button>
         </div>
