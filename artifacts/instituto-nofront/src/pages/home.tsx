@@ -102,7 +102,7 @@ const Repensar = () => {
   return (
     <section id="sobre" className="py-24 md:py-32 px-4 bg-brand-bg">
       <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
-        <h2 className="font-anton text-5xl md:text-7xl leading-[1.1]">
+        <h2 className="font-anton md:text-7xl ml-[-173px] mr-[-173px] mt-[2px] mb-[2px] pt-[19px] pb-[11px] text-left text-[60px] font-bold pr-[100px] pl-[1px]">
           Repensar Economia,<br/>Garantir o Futuro.
         </h2>
         <div className="flex flex-col items-start gap-8">
