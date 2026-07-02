@@ -168,3 +168,15 @@
   width: 200%;
   animation: marquee 22s linear infinite;
 }
+
+.parallax-bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 900px), (hover: none) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}

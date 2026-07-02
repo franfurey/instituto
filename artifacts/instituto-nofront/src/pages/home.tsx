@@ -122,20 +122,29 @@ const Repensar = () => {
 const Pilares = () => {
   return (
     <section id="pilares" className="grid grid-cols-1 md:grid-cols-3 min-h-[66vh]">
-      <div className="bg-brand-orquidea p-12 md:p-16 flex items-end min-h-[30vh]">
-        <h3 className="font-anton text-4xl md:text-6xl text-[#7A1BB8] leading-[1.1] hover:scale-105 transition-transform origin-bottom-left cursor-default">
+      <div className="bg-brand-orquidea p-12 md:p-16 flex flex-col justify-between min-h-[30vh]">
+        <h3 className="font-anton text-4xl md:text-6xl text-[#7A1BB8] leading-[1.1] hover:scale-105 transition-transform origin-top-left cursor-default">
           Incidência<br/>Política
         </h3>
+        <p className="text-white text-base md:text-lg max-w-md" data-testid="text-pilar-incidencia">
+          Reposicionamos mulheres negras como protagonistas da formulação de políticas públicas, da produção de pensamento econômico e da transformação das estruturas de poder.
+        </p>
       </div>
-      <div className="bg-brand-preto p-12 md:p-16 flex items-end min-h-[30vh]">
-        <h3 className="font-anton text-4xl md:text-6xl text-white leading-[1.1] hover:scale-105 transition-transform origin-bottom-left cursor-default">
+      <div className="bg-brand-preto p-12 md:p-16 flex flex-col justify-between min-h-[30vh]">
+        <h3 className="font-anton text-4xl md:text-6xl text-white leading-[1.1] hover:scale-105 transition-transform origin-top-left cursor-default">
           Educação
         </h3>
+        <p className="text-gray-200 text-base md:text-lg max-w-md" data-testid="text-pilar-educacao">
+          Por meio da educação, formamos e fortalecemos mulheres negras para ocupar o debate econômico e construir futuros mais justos.
+        </p>
       </div>
-      <div className="bg-brand-vermelho p-12 md:p-16 flex items-end min-h-[30vh]">
-        <h3 className="font-anton text-4xl md:text-6xl text-brand-dourado leading-[1.1] hover:scale-105 transition-transform origin-bottom-left cursor-default">
+      <div className="bg-brand-vermelho p-12 md:p-16 flex flex-col justify-between min-h-[30vh]">
+        <h3 className="font-anton text-4xl md:text-6xl text-brand-dourado leading-[1.1] hover:scale-105 transition-transform origin-top-left cursor-default">
           Pesquisa
         </h3>
+        <p className="text-white text-base md:text-lg max-w-md" data-testid="text-pilar-pesquisa">
+          Desenvolvemos estudos e análises a partir da produção intelectual de economistas negras para promover justiça econômica e ampliar o debate sobre equidade racial no contexto do Sul Global.
+        </p>
       </div>
     </section>
   );
@@ -144,7 +153,7 @@ const Pilares = () => {
 const PhotoBand = () => {
   return (
     <section
-      className="w-full min-h-[70vh] bg-[#C9BBB3] relative overflow-hidden bg-cover bg-center"
+      className="parallax-bg w-full min-h-[72vh] bg-[#C9BBB3] relative overflow-hidden"
       style={{ backgroundImage: `url(${marchaMulheresNegrasImg})` }}
       role="img"
       aria-label="Marcha das Mulheres Negras"
@@ -232,7 +241,7 @@ const Stats = () => {
 
 const Apoie = () => {
   return (
-    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center p-8 md:p-16 overflow-hidden bg-[#5a4f52]">
+    <section className="parallax-bg relative min-h-[100dvh] flex flex-col items-center justify-center p-8 md:p-16 overflow-hidden bg-[#5a4f52]">
       <div className="absolute inset-0 bg-black/60 z-10"></div>
       
       <div className="relative z-20 container mx-auto flex flex-col items-center justify-center text-center">
