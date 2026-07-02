@@ -122,7 +122,7 @@ const Pilares = () => {
   return (
     <section id="pilares" className="grid grid-cols-1 md:grid-cols-3 min-h-[66vh]">
       <div className="bg-brand-orquidea p-12 md:p-16 flex flex-col justify-start gap-6 min-h-[30vh]">
-        <h3 className="font-anton uppercase text-4xl md:text-5xl lg:text-6xl text-[#5A1189] leading-[1.1] hover:scale-105 transition-transform origin-top-left cursor-default">
+        <h3 className="font-anton uppercase text-[clamp(1.75rem,3.6vw,3.75rem)] text-[#5A1189] leading-[1.1] break-words hover:scale-105 transition-transform origin-top-left cursor-default">
           Incidência<br/>Política
         </h3>
         <p className="text-white text-base md:text-lg max-w-sm" data-testid="text-pilar-incidencia">
@@ -130,7 +130,7 @@ const Pilares = () => {
         </p>
       </div>
       <div className="bg-brand-preto p-12 md:p-16 flex flex-col justify-start gap-6 min-h-[30vh]">
-        <h3 className="font-anton uppercase text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] hover:scale-105 transition-transform origin-top-left cursor-default">
+        <h3 className="font-anton uppercase text-[clamp(1.75rem,3.6vw,3.75rem)] text-white leading-[1.1] break-words hover:scale-105 transition-transform origin-top-left cursor-default">
           Educação
         </h3>
         <p className="text-gray-200 text-base md:text-lg max-w-sm" data-testid="text-pilar-educacao">
@@ -138,7 +138,7 @@ const Pilares = () => {
         </p>
       </div>
       <div className="bg-brand-vermelho p-12 md:p-16 flex flex-col justify-start gap-6 min-h-[30vh]">
-        <h3 className="font-anton uppercase text-4xl md:text-5xl lg:text-6xl text-brand-dourado leading-[1.1] hover:scale-105 transition-transform origin-top-left cursor-default">
+        <h3 className="font-anton uppercase text-[clamp(1.75rem,3.6vw,3.75rem)] text-brand-dourado leading-[1.1] break-words hover:scale-105 transition-transform origin-top-left cursor-default">
           Pesquisa
         </h3>
         <p className="text-white text-base md:text-lg max-w-sm" data-testid="text-pilar-pesquisa">
