@@ -59,7 +59,7 @@ const Hero = () => {
     <section className="grid grid-cols-1 md:grid-cols-2 min-h-[88vh]">
       {/* Left */}
       <div className="p-8 md:p-16 flex flex-col justify-end bg-[#68429a]">
-        <h1 className="font-anton text-white md:text-[8vw] break-words ml-[-15px] mr-[-15px] pl-[0px] pr-[0px] border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px] pt-[0px] pb-[0px] mt-[8px] mb-[8px] text-[50px]">
+        <h1 className="font-anton text-white break-words ml-[-15px] mr-[-15px] pl-[0px] pr-[0px] border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px] pt-[0px] pb-[0px] mt-[8px] mb-[8px] text-[50px] md:text-[50px] lg:text-[60px]">
           Novos<br/>
           Futuros<br/>
           Econômicos
