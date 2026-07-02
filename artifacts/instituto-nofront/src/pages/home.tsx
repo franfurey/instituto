@@ -4,6 +4,7 @@ import { Globe, Menu, X, ArrowUpRight, Facebook, Instagram, Twitter, Linkedin } 
 import marchaMulheresNegrasImg from "@assets/marchamulheresnegras_1783012613504.jpg";
 import apoieBgVideo from "@/assets/video/apoie-bg.mp4";
 import apoieBgPoster from "@/assets/video/apoie-bg-poster.jpg";
+import paredeDeLambesImg from "@assets/Parede_de_lambes_1783025950378.png";
 
 // --- Components ---
 
@@ -163,39 +164,6 @@ const PhotoBand = () => {
   );
 };
 
-const AnimatedNumber = ({ end, duration = 2000 }: { end: number, duration?: number }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          let startTimestamp: number | null = null;
-          const step = (timestamp: number) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            // easeOut cubic
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(easeOut * end));
-            if (progress < 1) {
-              requestAnimationFrame(step);
-            }
-          };
-          requestAnimationFrame(step);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.5 }
-    );
-    
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [end, duration]);
-
-  return <span ref={ref}>{count}</span>;
-};
-
 const Stats = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2">
@@ -209,32 +177,12 @@ const Stats = () => {
       </div>
       
       <div className="flex flex-col">
-        <div className="bg-brand-vinho p-12 flex-1 flex flex-col justify-center text-center">
-          <div className="font-anton text-6xl md:text-8xl text-white mb-2">
-            +<AnimatedNumber end={300} />
-          </div>
-          <div className="font-anton text-xl md:text-2xl text-brand-dourado tracking-wide">
-            Lideranças Negras ouvidas
-          </div>
-        </div>
-        
-        <div className="bg-brand-preto p-12 flex-1 flex flex-col justify-center text-center">
-          <div className="font-anton text-6xl md:text-8xl text-white mb-2">
-            +<AnimatedNumber end={200} />
-          </div>
-          <div className="font-anton text-xl md:text-2xl text-white tracking-wide">
-            Mulheres inscritas em nossos programas
-          </div>
-        </div>
-        
-        <div className="bg-brand-orquidea p-12 flex-1 flex flex-col justify-center text-center">
-          <div className="font-anton text-6xl md:text-8xl text-white mb-2">
-            <AnimatedNumber end={6} />
-          </div>
-          <div className="font-anton text-xl md:text-2xl text-white tracking-wide">
-            Boletins de Economia Produzidos
-          </div>
-        </div>
+        <img
+          src={paredeDeLambesImg}
+          alt="Parede de lambes do Instituto NoFront"
+          className="w-full h-full object-cover"
+          data-testid="img-stats-lambes"
+        />
       </div>
     </section>
   );
