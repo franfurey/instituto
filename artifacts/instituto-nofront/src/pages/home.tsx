@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { Globe, Menu, X, ArrowUpRight, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import marchaMulheresNegrasImg from "@assets/marchamulheresnegras_1783012613504.jpg";
 
 // --- Components ---
 
@@ -142,13 +143,13 @@ const Pilares = () => {
 
 const PhotoBand = () => {
   return (
-    <section className="w-full min-h-[70vh] bg-[#C9BBB3] relative overflow-hidden flex items-center justify-center">
-      {/* Fallback for image. Real image would go here. */}
-      <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIi8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMwMDAiLz4KPC9zdmc+')] mix-blend-overlay"></div>
-      <p className="font-anton text-black/20 text-[15vw] select-none pointer-events-none whitespace-nowrap overflow-hidden">
-        MARCHA DAS MULHERES NEGRAS
-      </p>
-    </section>
+    <section
+      className="w-full min-h-[70vh] bg-[#C9BBB3] relative overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: `url(${marchaMulheresNegrasImg})` }}
+      role="img"
+      aria-label="Marcha das Mulheres Negras"
+      data-testid="img-photoband-marcha"
+    />
   );
 };
 
