@@ -122,26 +122,26 @@ const Pilares = () => {
   return (
     <section id="pilares" className="grid grid-cols-1 md:grid-cols-3 min-h-[66vh]">
       <div className="bg-brand-orquidea p-12 md:p-16 flex flex-col justify-start gap-6 md:gap-16 min-h-[30vh]">
-        <h3 className="font-anton uppercase text-[#5A1189] break-words hover:scale-105 transition-transform origin-top-left cursor-default text-[30px]">
+        <h3 className="font-anton uppercase text-[#5A1189] break-words hover:scale-105 transition-transform origin-top-left cursor-default text-[35px]">
           Incidência<br/>Política
         </h3>
-        <p className="text-white max-w-sm md:text-xs text-left text-[14px]" data-testid="text-pilar-incidencia">
+        <p className="text-white max-w-sm md:text-xs text-left text-[16px] ml-[-5px] mr-[-5px] mt-[262px] mb-[262px]" data-testid="text-pilar-incidencia">
           Reposicionamos mulheres negras como protagonistas da formulação de políticas públicas, da produção de pensamento econômico e da transformação das estruturas de poder.
         </p>
       </div>
       <div className="bg-brand-preto p-12 md:p-16 flex flex-col justify-start gap-6 md:gap-16 min-h-[30vh]">
-        <h3 className="font-anton uppercase text-white break-words hover:scale-105 transition-transform origin-top-left cursor-default text-[30px]">
+        <h3 className="font-anton uppercase text-white break-words hover:scale-105 transition-transform origin-top-left cursor-default text-[35px]">
           Educação
         </h3>
-        <p className="text-gray-200 max-w-sm text-[14px]" data-testid="text-pilar-educacao">
+        <p className="text-gray-200 max-w-sm mt-[301px] mb-[301px] text-[16px]" data-testid="text-pilar-educacao">
           Por meio da educação, formamos e fortalecemos mulheres negras para ocupar o debate econômico e construir futuros mais justos.
         </p>
       </div>
       <div className="bg-brand-vermelho p-12 md:p-16 flex flex-col justify-start gap-6 md:gap-16 min-h-[30vh]">
-        <h3 className="font-anton uppercase text-brand-dourado break-words hover:scale-105 transition-transform origin-top-left cursor-default text-[30px]">
+        <h3 className="font-anton uppercase text-brand-dourado break-words hover:scale-105 transition-transform origin-top-left cursor-default text-[35px]">
           Pesquisa
         </h3>
-        <p className="text-white max-w-sm text-[14px] ml-[0px] mr-[0px]" data-testid="text-pilar-pesquisa">
+        <p className="text-white max-w-sm ml-[0px] mr-[0px] text-[16px] mt-[290px] mb-[290px]" data-testid="text-pilar-pesquisa">
           Desenvolvemos estudos e análises a partir da produção intelectual de economistas negras para promover justiça econômica e ampliar o debate sobre equidade racial no contexto do Sul Global.
         </p>
       </div>
