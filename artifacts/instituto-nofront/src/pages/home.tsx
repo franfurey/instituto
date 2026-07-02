@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { Globe, Menu, X, ArrowUpRight, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import marchaMulheresNegrasImg from "@assets/marchamulheresnegras_1783012613504.jpg";
+import apoieBgVideo from "@/assets/video/apoie-bg.mp4";
+import apoieBgPoster from "@/assets/video/apoie-bg-poster.jpg";
 
 // --- Components ---
 
@@ -240,7 +242,18 @@ const Stats = () => {
 
 const Apoie = () => {
   return (
-    <section className="parallax-bg relative min-h-[100dvh] flex flex-col items-center justify-center p-8 md:p-16 overflow-hidden bg-[#5a4f52]">
+    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center p-8 md:p-16 overflow-hidden bg-[#5a4f52]">
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        src={apoieBgVideo}
+        poster={apoieBgPoster}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        data-testid="video-apoie-bg"
+      />
       <div className="absolute inset-0 bg-black/60 z-10"></div>
       
       <div className="relative z-20 container mx-auto flex flex-col items-center justify-center text-center">
