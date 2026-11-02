@@ -235,3 +235,10 @@
     background-attachment: scroll;
   }
 }
+
+h1, h2, h3, h4 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: manual;
+  text-wrap: balance;
+}

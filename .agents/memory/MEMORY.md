@@ -1,0 +1,1 @@
+- [Fidelidade editorial](fidelidade-editorial.md) — textos finais são integrais; formatação visual não deve criar falsas divergências nos testes.
