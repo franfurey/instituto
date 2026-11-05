@@ -1,2 +1,3 @@
 - [Fidelidade editorial](fidelidade-editorial.md) — textos finais são integrais; formatação visual não deve criar falsas divergências nos testes.
 - [Tipografia responsiva](tipografia-responsiva.md) — preservar palavras inteiras quando a Ogonek ultrapassa o espaço, com ajuste pontual do título em vez de corte ou hifenização.
+- [Símbolo oficial](simbolo-oficial.md) — o usuário confirmou que o vetor simbolo-nofront.svg é o símbolo do instituto.
