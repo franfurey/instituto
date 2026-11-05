@@ -51,7 +51,7 @@ export function QuemSomosSecao() {
       </div>
 
       <div className="qs-intro-row">
-        <p className="qs-intro txt-destaque qs-item">Quando mulheres negras são reconhecidas como produtoras de conhecimento e formuladoras de alternativas — e não apenas como destinatárias de políticas públicas — temas como trabalho, renda, cuidado, orçamento público, política fiscal, política monetária, desenvolvimento e distribuição de poder passam a ser compreendidos a partir de <strong>outras perguntas, evidências e prioridades.</strong></p>
+        <p className="qs-intro txt-destaque qs-item">Quando mulheres negras são reconhecidas como produtoras de conhecimento e formuladoras de alternativas, e <strong>não apenas como destinatárias de políticas públicas</strong>, temas como trabalho, renda, cuidado, orçamento público, política fiscal, política monetária, desenvolvimento e distribuição de poder passam a ser compreendidos a partir de <strong>outras perguntas, evidências e prioridades.</strong></p>
       </div>
 
       <div className="qs-marquee" aria-label="Temas de atuação">
