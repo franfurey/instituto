@@ -74,22 +74,6 @@ const PhotoBand = () => (
   />
 );
 
-const NUMEROS = [
-  { n: "+200", t: "mulheres inscritas em nossos programas", bg: "bg-brand-vermelho text-white" },
-  { n: "6", t: "boletins econômicos produzidos", bg: "bg-brand-preto text-brand-dourado" },
-];
-
-const Numeros = () => (
-  <section aria-label="Números de impacto" className="grid grid-cols-1 md:grid-cols-2">
-    {NUMEROS.map((x, i) => (
-      <div key={x.n} className={`${x.bg} bloco flex flex-col gap-4`} data-testid={`stat-${i}`}>
-        <span className="font-anton text-6xl md:text-8xl leading-none pt-2">{x.n}</span>
-        <span className="txt-destaque font-medium">{x.t}</span>
-      </div>
-    ))}
-  </section>
-);
-
 /** Vídeo decorativo: só toca automaticamente se a pessoa não preferir movimento reduzido. */
 function VideoBg() {
   const ref = useRef<HTMLVideoElement>(null);
@@ -180,7 +164,6 @@ export default function Home() {
       <ComoAtuamos />
       <PhotoBand />
       <ManifestoBanner />
-      <Numeros />
       <VideoCta />
       <Insights />
       <Marquee />
