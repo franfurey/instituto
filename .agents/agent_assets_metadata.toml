@@ -1,0 +1,30 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "UmQzvhAXVhdf2PX7ixoGY"
+uri = "file://screenshots/quem-somos-computador.jpg"
+type = "image"
+title = "Quem somos — computador"
+description = "Captura da seção redesenhada em 1440px, com as animações pausadas para leitura."
+logical_id = "1e2c3457-c979-47a5-bbfa-2b6c6e9659d0"
+content_hash = "sha256:06131f6b1d8dd4bd70da0ff6dbf25666b04ccc18b7e5b1604034e24da4b0f26a"
+size = 212422
+mtime_ms = 1793885691718
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/1e2c3457-c979-47a5-bbfa-2b6c6e9659d0/111a0a38-d524-4158-8492-c59e62e60aa3"
+storage_version_token = "1793885713056629"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "HXJuwHN_XoYSalqJcbjjG"
+uri = "file://screenshots/quem-somos-celular-390.jpg"
+type = "image"
+title = "Quem somos — celular"
+description = "Captura completa da seção em 390px. A versão de 360px também foi conferida visualmente."
+logical_id = "e0d25d2b-c0af-40ba-ab9f-dfee3b772d58"
+content_hash = "sha256:ac5ef2c81f74d47df3437697cf9316057a76161de220560eb7d5636290478a0b"
+size = 138202
+mtime_ms = 1793885693318
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/e0d25d2b-c0af-40ba-ab9f-dfee3b772d58/11db3107-6b82-4bdd-827f-d18cc7a99185"
+storage_version_token = "1793885713967671"
+content_type = "image/jpeg"

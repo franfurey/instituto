@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
+
+
+
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek';
+  src: url('/fonts/Ogonek-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogonek Unicase';
+  src: url('/fonts/Ogonek-Unicase.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --background: 45 20% 96%;
+  --foreground: 0 0% 7%;
+  --border: 0 0% 85%;
+  --card: 45 20% 96%;
+  --card-foreground: 0 0% 7%;
+  --card-border: 0 0% 85%;
+  
+  --popover: 45 20% 96%;
+  --popover-foreground: 0 0% 7%;
+  --popover-border: 0 0% 85%;
+  
+  --primary: 279 70% 46%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 0 0% 7%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 45 10% 90%;
+  --muted-foreground: 0 0% 40%;
+  
+  --accent: 302 33% 50%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 11 70% 51%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --input: 0 0% 85%;
+  --ring: 279 70% 46%;
+  
+  --radius: 0.5rem;
+}
+.dark {
+  --background: 0 0% 7%;
+  --foreground: 45 20% 96%;
+  --border: 0 0% 20%;
+  --card: 0 0% 7%;
+  --card-foreground: 45 20% 96%;
+  --card-border: 0 0% 20%;
+  
+  --popover: 0 0% 7%;
+  --popover-foreground: 45 20% 96%;
+  --popover-border: 0 0% 20%;
+  
+  --primary: 279 70% 46%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 45 20% 96%;
+  --secondary-foreground: 0 0% 7%;
+  
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;
+  
+  --accent: 302 33% 50%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 11 70% 51%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --input: 0 0% 20%;
+  --ring: 279 70% 46%;
+}
+@theme inline { --font-anton: "Ogonek Unicase", sans-serif; --color-brand-bg: #F6F5F2; --color-brand-preto: #121212; }
