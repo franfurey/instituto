@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -70,7 +70,7 @@
   --color-popover-foreground: hsl(var(--popover-foreground));
   --color-popover-border: hsl(var(--popover-border));
 
-  --color-primary: hsl(var(--primary));
+  --color-primary: var(--color-brand-roxo);
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-primary-border: var(--primary-border);
 
@@ -82,28 +82,30 @@
   --color-muted-foreground: hsl(var(--muted-foreground));
   --color-muted-border: var(--muted-border);
 
-  --color-accent: hsl(var(--accent));
+  --color-accent: var(--color-brand-orquidea);
   --color-accent-foreground: hsl(var(--accent-foreground));
   --color-accent-border: var(--accent-border);
 
-  --color-destructive: hsl(var(--destructive));
+  --color-destructive: var(--color-brand-vermelho);
   --color-destructive-foreground: hsl(var(--destructive-foreground));
   --color-destructive-border: var(--destructive-border);
 
   --font-sans: 'Inter', sans-serif;
-  --font-anton: 'Ogonek Unicase', 'Anton', sans-serif;
-  --font-ogonek: 'Ogonek', 'Anton', sans-serif;
-  --font-ogonek-unicase: 'Ogonek Unicase', 'Anton', sans-serif;
+  --font-anton: 'Ogonek Unicase', sans-serif;
+  --font-ogonek: 'Ogonek', sans-serif;
+  --font-ogonek-unicase: 'Ogonek Unicase', sans-serif;
 
-  --color-brand-bg: hsl(45 20% 96%); /* #F6F5F2 */
-  --color-brand-preto: hsl(0 0% 7%); /* #121212 */
-  --color-brand-roxo: hsl(279 70% 46%); /* #8E24C8 */
-  --color-brand-orquidea: hsl(302 33% 50%); /* #A855A5 */
-  --color-brand-vermelho: hsl(11 70% 51%); /* #D94A2B */
-  --color-brand-vinho: hsl(342 73% 44%); /* #C21E4F */
-  --color-brand-dourado: hsl(36 75% 56%); /* #E2A03C */
-  --color-brand-laranja: hsl(12 87% 54%); /* #F04B21 */
-  --color-brand-amarelo: hsl(53 90% 65%); /* #F5E356 */
+}
+
+/* Paleta oficial — únicas cores da marca (emitidas como variáveis CSS) */
+@theme {
+  --color-brand-roxo: #6c398e;
+  --color-brand-orquidea: #ab4b97;
+  --color-brand-vinho: #b91447;
+  --color-brand-vermelho: #d24134;
+  --color-brand-dourado: #dd9c40;
+  --color-brand-preto: #121212;
+  --color-brand-bg: #F6F5F2;
 }
 
 /* LIGHT MODE */
@@ -119,23 +121,20 @@
   --popover-foreground: 0 0% 7%;
   --popover-border: 0 0% 85%;
   
-  --primary: 279 70% 46%;
   --primary-foreground: 0 0% 100%;
   
   --secondary: 0 0% 7%;
   --secondary-foreground: 0 0% 100%;
   
   --muted: 45 10% 90%;
-  --muted-foreground: 0 0% 40%;
+  --muted-foreground: 0 0% 29%;
   
-  --accent: 302 33% 50%;
   --accent-foreground: 0 0% 100%;
   
-  --destructive: 11 70% 51%;
   --destructive-foreground: 0 0% 100%;
   
   --input: 0 0% 85%;
-  --ring: 279 70% 46%;
+  --ring: 0 0% 7%;
   
   --radius: 0.5rem;
 }
@@ -152,7 +151,6 @@
   --popover-foreground: 45 20% 96%;
   --popover-border: 0 0% 20%;
   
-  --primary: 279 70% 46%;
   --primary-foreground: 0 0% 100%;
   
   --secondary: 45 20% 96%;
@@ -161,14 +159,12 @@
   --muted: 0 0% 15%;
   --muted-foreground: 0 0% 60%;
   
-  --accent: 302 33% 50%;
   --accent-foreground: 0 0% 100%;
   
-  --destructive: 11 70% 51%;
   --destructive-foreground: 0 0% 100%;
   
   --input: 0 0% 20%;
-  --ring: 279 70% 46%;
+  --ring: 0 0% 100%;
 }
 
 @layer base {
@@ -196,49 +192,136 @@
   }
 }
 
-.font-anton {
+/* ---------- Layout: escala 8px, container e gutter ---------- */
+:root {
+  --gutter: 24px;
+  --edge: max(var(--gutter), calc((100vw - 1280px) / 2 + var(--gutter)));
+  --sec-y: 80px;
+  --bloco-y: 48px;
+}
+@media (min-width: 768px) { :root { --gutter: 40px; } }
+@media (min-width: 1024px) { :root { --gutter: 80px; --sec-y: 128px; --bloco-y: 64px; } }
+
+html, body { overflow-x: clip; }
+
+/* Container padrão: 1280px incluindo os gutters. */
+.wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.sec { padding-block: var(--sec-y); }
+/* Blocos coloridos de ponta a ponta (colunas de grades divididas) */
+.bloco { padding: var(--bloco-y) var(--gutter); }
+@media (min-width: 1024px) { .bloco { padding: 72px var(--gutter); } }
+/* Primeira coluna de uma grade dividida: alinha à mesma linha do .wrap */
+@media (min-width: 768px) {
+  .bloco-edge { padding-left: var(--edge); }
+}
+main .grid > *, main article, main section { min-width: 0; }
+/* Seções seguidas com o mesmo fundo não somam respiro */
+.sec + .sec.sec-cont { padding-top: 0; }
+
+/* ---------- Tipografia oficial ---------- */
+.font-anton { font-family: var(--font-anton); letter-spacing: 0.01em; }
+
+.txt-rotulo, .txt-h1, .txt-h2, .txt-h3 {
   font-family: var(--font-anton);
-  letter-spacing: 0.01em;
+  font-weight: 400;
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+.txt-rotulo { font-size: 14px; line-height: 1.2; letter-spacing: 0.06em; }
+.txt-h1 { --heading-size: 40px; font-size: var(--heading-fit, var(--heading-size)); line-height: 1; }
+.txt-h2 { --heading-size: 30px; font-size: var(--heading-fit, var(--heading-size)); line-height: 1.05; }
+.txt-h3 { --heading-size: 22px; font-size: var(--heading-fit, var(--heading-size)); line-height: 1.15; }
+.txt-destaque { font-size: 20px; line-height: 1.5; }
+.txt-corpo { font-size: 17px; line-height: 1.65; }
+.txt-pequeno { font-size: 14px; line-height: 1.5; }
+@media (min-width: 1024px) {
+  .txt-rotulo { font-size: 16px; }
+  .txt-h1 { --heading-size: 72px; }
+  .txt-h2 { --heading-size: 48px; }
+  .txt-h3 { --heading-size: 28px; }
+  .txt-destaque { font-size: 24px; }
+  .txt-corpo { font-size: 18px; }
+  .txt-pequeno { font-size: 15px; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .txt-h1 { --heading-size: 56px; }
+  .txt-h2 { --heading-size: 40px; }
+  .txt-h3 { --heading-size: 24px; }
+}
+.txt-destaque, .txt-corpo, .txt-pequeno { font-family: var(--font-sans); }
+p, li, blockquote p { text-wrap: pretty; }
+main p, main li { max-width: 65ch; }
+main p { text-align: left; }
+@media (min-width: 1024px) {
+  #pilares > article > h3 { min-height: 4lh; }
+}
+.txt-destaque { max-width: 65ch; }
+h1, h2, h3, h4 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: balance;
 }
 
-.pill-btn {
-  @apply rounded-full font-anton px-8 py-4 bg-brand-preto text-white inline-flex items-center justify-center transition-transform hover:-translate-y-0.5;
+/* Ritmo vertical dentro das seções */
+.stack > * + * { margin-top: 16px; }
+.stack > .txt-rotulo + * { margin-top: 16px; }
+.stack > :is(h1, h2, h3) + * { margin-top: 24px; }
+.stack > .acoes { margin-top: 32px; }
+
+/* ---------- Botões ---------- */
+.pill-btn, .pill-btn-branco, .pill-btn-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 3px 24px 0; /* Ogonek Unicase assenta alto: compensa no topo */
+  border-radius: 9999px;
+  font-family: var(--font-anton);
+  font-size: 16px;
+  line-height: 1;
+  text-align: left;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.pill-btn svg, .pill-btn-branco svg, .pill-btn-sm svg { flex-shrink: 0; margin-top: -3px; }
+.pill-btn { background: var(--color-brand-preto); color: #fff; }
+.pill-btn-branco { background: #fff; color: var(--color-brand-preto); }
+.pill-btn-sm { background: var(--color-brand-preto); color: #fff; }
+.pill-btn-lg { min-height: 56px; padding-inline: 32px; font-size: 18px; }
+@media (hover: hover) {
+  .pill-btn:hover, .pill-btn-branco:hover, .pill-btn-sm:hover { transform: translateY(-2px); }
 }
 
-.pill-btn-branco {
-  @apply rounded-full font-anton px-8 py-4 bg-white text-brand-preto inline-flex items-center justify-center transition-transform hover:-translate-y-0.5;
+/* ---------- Foco e toque ---------- */
+:focus-visible {
+  outline: 3px solid var(--color-brand-roxo);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
-
-.pill-btn-sm {
-  @apply rounded-full font-sans font-semibold tracking-wide text-xs px-5 py-3 bg-brand-preto text-white inline-flex items-center justify-center transition-transform hover:-translate-y-0.5;
+.bg-brand-roxo :focus-visible, .bg-brand-preto :focus-visible, .bg-brand-vinho :focus-visible,
+.bg-brand-orquidea :focus-visible, .bg-brand-vermelho :focus-visible, .on-dark :focus-visible {
+  outline-color: var(--color-brand-dourado);
 }
+.pill-btn:focus-visible, .pill-btn-branco:focus-visible, .pill-btn-sm:focus-visible { border-radius: 9999px; }
+.tap { min-height: 44px; display: inline-flex; align-items: center; }
 
+/* ---------- Animações ---------- */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+.animate-marquee { display: flex; width: max-content; animation: marquee 22s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .animate-marquee { animation: none; } }
 
-.animate-marquee {
-  display: flex;
-  width: 200%;
-  animation: marquee 22s linear infinite;
-}
-
-.parallax-bg {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
+.parallax-bg { background-size: cover; background-position: center; background-attachment: fixed; }
 @media (max-width: 900px), (hover: none) {
-  .parallax-bg {
-    background-attachment: scroll;
-  }
-}
-
-h1, h2, h3, h4 {
-  overflow-wrap: normal;
-  word-break: normal;
-  hyphens: manual;
-  text-wrap: balance;
+  .parallax-bg { background-attachment: scroll; }
 }

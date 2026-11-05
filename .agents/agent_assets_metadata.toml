@@ -28,3 +28,59 @@ mtime_ms = 1793885693318
 storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/e0d25d2b-c0af-40ba-ab9f-dfee3b772d58/11db3107-6b82-4bdd-827f-d18cc7a99185"
 storage_version_token = "1793885713967671"
 content_type = "image/jpeg"
+
+[[outputs]]
+id = "T8yB_cAg_IKHttxDFr4xR"
+uri = "file://generated-artifacts/revisao-design/inicio-1440.jpg"
+type = "image"
+title = "Início — computador 1440px"
+description = "Captura da versão revisada do Instituto NoFront."
+logical_id = "6d7cde24-b5b1-4ed9-996c-0af26e5c959b"
+content_hash = "sha256:1682f766558b14c42f39e289c698d527630d31820eaf91eced8ba12fe7c80e9b"
+size = 137922
+mtime_ms = 1793887399545
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/6d7cde24-b5b1-4ed9-996c-0af26e5c959b/1abddbc9-32dc-4669-a740-dab85b04a894"
+storage_version_token = "1793887449681869"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "sx1y35A3eCrXP0tkf7RsW"
+uri = "file://generated-artifacts/revisao-design/inicio-390.jpg"
+type = "image"
+title = "Início — celular 390px"
+description = "Captura da versão revisada do Instituto NoFront."
+logical_id = "25f6e733-ce97-440e-842d-2899b6ffde27"
+content_hash = "sha256:65f388d3463d9726439a83659b31391c4f680f5c36618d5f5453ac409016a28e"
+size = 64318
+mtime_ms = 1793887401377
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/25f6e733-ce97-440e-842d-2899b6ffde27/34cbd47e-0820-4a9b-b68f-2adae2cdff60"
+storage_version_token = "1793887450460949"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "Flz2bj2-YA6vR665Sy6j3"
+uri = "file://generated-artifacts/revisao-design/manifesto-1440.jpg"
+type = "image"
+title = "Manifesto — computador 1440px"
+description = "Captura da versão revisada do Instituto NoFront."
+logical_id = "c7295a4e-ecf9-474b-9262-93f6715827ec"
+content_hash = "sha256:f33f721e30c6aa14c60045d66a57f0604cdb327615505d762b0fe423463c1169"
+size = 209245
+mtime_ms = 1793887403965
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/c7295a4e-ecf9-474b-9262-93f6715827ec/e45cdb96-be48-4ba2-8c74-019a03df33d1"
+storage_version_token = "1793887451248800"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "8Lxi9eVI-3zd3psI57WFI"
+uri = "file://generated-artifacts/revisao-design/manifesto-390.jpg"
+type = "image"
+title = "Manifesto — celular 390px"
+description = "Captura da versão revisada do Instituto NoFront."
+logical_id = "2c0900d9-16f7-4f9c-8461-689de66c9639"
+content_hash = "sha256:3112c55d285a1654f1b71c2fcdbc4cec2e73c013407a647aeb98fe29b7d5c121"
+size = 88114
+mtime_ms = 1793887405409
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/2c0900d9-16f7-4f9c-8461-689de66c9639/30471a18-99e1-4747-9901-9c2b011fdf24"
+storage_version_token = "1793887451899777"
+content_type = "image/jpeg"

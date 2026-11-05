@@ -19,64 +19,61 @@ const MENU = [
   { label: "Contato", href: "/contato" },
 ];
 
-function LegalItem({ label, url, testId }: { label: string; url: string; testId: string }) {
-  if (url)
-    return (
-      <a href={url} className="hover:text-white/80 text-white/60 transition-colors w-fit" data-testid={testId}>
-        {label}
-      </a>
-    );
-  return (
-    <span className="text-white/40 w-fit" aria-disabled="true" data-testid={testId}>
-      {label} <span className="text-[10px] uppercase tracking-wider border border-white/30 rounded-full px-2 py-0.5 ml-1">Em breve</span>
-    </span>
-  );
-}
+// TODO: URLs de Acessibilidade e Política de Privacidade (src/lib/site.ts). Itens sem URL ficam ocultos.
+const LEGAL = [
+  { label: "Acessibilidade", url: ACESSIBILIDADE_URL, testId: "footer-legal-a11y" },
+  { label: "Política de Privacidade", url: PRIVACIDADE_URL, testId: "footer-legal-privacy" },
+].filter((l) => l.url);
 
 export function SiteFooter() {
   return (
-    <footer className="bg-brand-preto text-white pt-20 md:pt-24 pb-8 px-4">
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 mb-20">
+    <footer className="on-dark bg-brand-preto text-white pt-20 lg:pt-32 pb-8 txt-pequeno">
+      <div className="wrap">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 mb-16">
           <div className="flex flex-col items-start gap-4">
-            <Link href="/" className="flex items-center gap-2 mb-2" data-testid="footer-logo">
+            <Link href="/" className="flex items-center gap-2 mb-2" data-testid="footer-logo" aria-label="Instituto NoFront, ir para o início">
               <Globe className="w-10 h-10" aria-hidden />
-              <span className="font-anton text-3xl lowercase leading-none">instituto<br />NoFront</span>
+              <span className="font-anton text-3xl lowercase leading-[1.1] pt-1">instituto<br />NoFront</span>
             </Link>
-            <p className="text-white/60 text-sm">Transformando a economia a partir de vozes negras.</p>
+            <p className="text-[#CFCFCF]">Transformando a economia a partir de vozes negras.</p>
           </div>
 
-          <nav aria-label="Rodapé" className="flex flex-col gap-3">
-            <h2 className="font-anton text-xl text-white/50 mb-2">Menu</h2>
+          <nav aria-label="Rodapé" className="flex flex-col gap-1">
+            <h2 className="txt-rotulo text-brand-dourado mb-2">Menu</h2>
             {MENU.map((m) => (
-              <Link key={m.href} href={m.href} className="hover:text-brand-orquidea transition-colors w-fit" data-testid={`footer-nav-${m.href.replace(/\//g, "-") || "inicio"}`}>
+              <Link key={m.href} href={m.href} className="tap hover:text-brand-dourado transition-colors w-fit" data-testid={`footer-nav-${m.href.replace(/\//g, "-") || "inicio"}`}>
                 {m.label}
               </Link>
             ))}
           </nav>
 
-          <div className="flex flex-col gap-3">
-            <h2 className="font-anton text-xl text-white/50 mb-2">Redes</h2>
+          <div className="flex flex-col gap-1">
+            <h2 className="txt-rotulo text-brand-dourado mb-2">Redes</h2>
             {SOCIAIS.length === 0 ? (
               // TODO: URLs das redes sociais em src/lib/site.ts
-              <span className="text-white/40 text-sm">Em breve</span>
+              <span className="text-[#CFCFCF]">Em breve</span>
             ) : (
               SOCIAIS.map(({ key, label, url, Icon }) => (
-                <a key={key} href={url} target="_blank" rel="noreferrer" className="hover:text-brand-amarelo transition-colors flex items-center gap-2 w-fit" data-testid={`footer-social-${key}`}>
+                <a key={key} href={url} target="_blank" rel="noopener noreferrer" className="tap hover:text-brand-dourado transition-colors gap-2 w-fit" data-testid={`footer-social-${key}`}>
                   <Icon className="w-5 h-5" aria-hidden /> {label}
                 </a>
               ))
             )}
           </div>
 
-          <div className="flex flex-col gap-3">
-            <h2 className="font-anton text-xl text-white/50 mb-2">Legal</h2>
-            <LegalItem label="Acessibilidade" url={ACESSIBILIDADE_URL} testId="footer-legal-a11y" />
-            <LegalItem label="Política de Privacidade" url={PRIVACIDADE_URL} testId="footer-legal-privacy" />
-          </div>
+          {LEGAL.length > 0 && (
+            <div className="flex flex-col gap-1">
+              <h2 className="txt-rotulo text-brand-dourado mb-2">Legal</h2>
+              {LEGAL.map((l) => (
+                <a key={l.testId} href={l.url} target="_blank" rel="noopener noreferrer" className="tap hover:text-brand-dourado text-[#CFCFCF] transition-colors w-fit" data-testid={l.testId}>
+                  {l.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-white/40 text-sm">
+        <div className="border-t border-white/10 pt-8 text-[#CFCFCF]">
           <p>© 2026 Instituto NoFront. Todos os direitos reservados.</p>
         </div>
       </div>

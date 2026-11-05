@@ -1,5 +1,5 @@
 import { useId, useState, type ReactNode } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /** Mostra `intro` sempre e `rest` sob demanda (conteúdo integral permanece no DOM). */
@@ -21,7 +21,7 @@ export function Expandable({
   const [open, setOpen] = useState(false);
   const id = useId();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 txt-corpo">
       {intro}
       <div id={id} hidden={!open} className="flex flex-col gap-4">
         {rest}
@@ -31,11 +31,11 @@ export function Expandable({
         aria-expanded={open}
         aria-controls={id}
         onClick={() => setOpen((o) => !o)}
-        className={cn("pill-btn-sm gap-2 self-start", buttonClassName)}
+        className={cn("pill-btn-sm self-start mt-4", buttonClassName)}
         data-testid={testId}
       >
         {open ? lessLabel : moreLabel}
-        <ChevronDown className={cn("w-4 h-4 transition-transform", open && "rotate-180")} aria-hidden />
+        {open ? <ChevronUp className="w-4 h-4" aria-hidden /> : <ChevronDown className="w-4 h-4" aria-hidden />}
       </button>
     </div>
   );
