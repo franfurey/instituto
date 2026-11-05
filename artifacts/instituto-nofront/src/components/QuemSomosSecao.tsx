@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { SimboloNoFront } from "@/components/SimboloNoFront";
 import "./QuemSomosSecao.css";
 
 const temas = ["trabalho", "renda", "cuidado", "orçamento público", "política fiscal", "política monetária", "desenvolvimento", "distribuição de poder"];
@@ -11,11 +12,7 @@ function Selo() {
       <circle cx="160" cy="160" r="150" fill="none" stroke="white" strokeWidth="1.5" />
       <text className="qs-seal-type" textLength="810" lengthAdjust="spacingAndGlyphs"><textPath href="#qs-text-circle" startOffset="0%">{seloTemas}</textPath></text>
       <circle className="qs-seal-core" cx="160" cy="160" r="72" />
-      <g className="qs-globe" fill="none" strokeWidth="4">
-        <circle cx="160" cy="160" r="45" />
-        <ellipse cx="160" cy="160" rx="20" ry="45" />
-        <path d="M117 160h86M126 137h68M126 183h68" />
-      </g>
+      <SimboloNoFront className="qs-symbol" x={124} y={110} width={72} height={100} aria-hidden />
     </svg>
   );
 }

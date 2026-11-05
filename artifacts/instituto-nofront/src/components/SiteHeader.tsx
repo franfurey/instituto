@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Globe, Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import { SimboloNoFront } from "@/components/SimboloNoFront";
 import { cn } from "@/lib/utils";
 import { APOIE_URL } from "@/lib/site";
 
@@ -203,7 +204,7 @@ export function SiteHeader({ theme = "default" }: { theme?: "default" | "home-da
     <header data-theme={theme} className="site-header sticky top-0 z-50 w-full bg-brand-bg/90 backdrop-blur border-b border-black/5">
       <div className="wrap h-20 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 shrink-0 min-h-[44px]" data-testid="link-home" aria-label="Instituto NoFront, ir para o início">
-          <Globe className="w-8 h-8 shrink-0" aria-hidden />
+          <SimboloNoFront className="w-8 h-8 shrink-0" aria-hidden />
           <span className="font-anton text-lg sm:text-2xl leading-[1.2] pt-[3px] tracking-wide lowercase whitespace-nowrap">instituto / NoFront</span>
         </Link>
 

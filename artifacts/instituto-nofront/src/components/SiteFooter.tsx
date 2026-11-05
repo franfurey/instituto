@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Globe, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { SimboloNoFront } from "@/components/SimboloNoFront";
 import { SOCIAL_URLS, ACESSIBILIDADE_URL, PRIVACIDADE_URL } from "@/lib/site";
 
 export const SOCIAIS = [
@@ -32,7 +33,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 mb-16">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2 mb-2" data-testid="footer-logo" aria-label="Instituto NoFront, ir para o início">
-              <Globe className="w-10 h-10" aria-hidden />
+              <SimboloNoFront className="w-10 h-10" aria-hidden />
               <span className="font-anton text-3xl lowercase leading-[1.1] pt-1">instituto<br />NoFront</span>
             </Link>
             <p className="text-[#CFCFCF]">Transformando a economia a partir de vozes negras.</p>

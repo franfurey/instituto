@@ -20,7 +20,7 @@
 .qs-seal { display:block; width:min(320px,82%); height:auto; overflow:visible; animation:qs-rotate 30s linear infinite; }
 .qs-seal text { fill:white; font:400 14px "Ogonek Unicase",sans-serif; letter-spacing:.08em; }
 .qs-seal-core { fill: var(--qs-gold); }
-.qs-globe { stroke: var(--qs-ink); }
+.qs-symbol { color: var(--qs-ink); }
 @keyframes qs-rotate { to { transform:rotate(360deg); } }
 .qs-intro-row { min-height:256px; display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); }
 .qs-stripes { grid-column:span 2; background:repeating-linear-gradient(-45deg,var(--qs-ink) 0 24px,var(--qs-purple) 24px 48px,color-mix(in srgb, var(--qs-purple) 40%, var(--qs-paper)) 48px 72px); }

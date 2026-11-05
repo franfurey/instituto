@@ -7,4 +7,10 @@ O usuário identificou o vetor `simbolo-nofront.svg` como o símbolo do Institut
 
 **Why:** confirmação explícita do usuário; o globo genérico presente em outras aplicações não é esse vetor.
 
-**How to apply:** tratar o vetor fornecido como referência oficial do símbolo. A confirmação de identidade não autoriza, por si só, alterar outras partes do site.
+**How to apply:** tratar o vetor fornecido como referência oficial do símbolo.
+
+Substituir todos os globos pelo símbolo oficial do instituto.
+
+**Why:** o usuário pediu explicitamente “subistituir todos os globos”.
+
+**How to apply:** usar o vetor oficial nas aplicações da marca, incluindo cabeçalho, rodapé, selo e ícone da aba; não reintroduzir o globo genérico como substituto.
