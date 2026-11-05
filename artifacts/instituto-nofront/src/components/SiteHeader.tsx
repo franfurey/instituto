@@ -180,7 +180,7 @@ function MobileGroup({ item, location }: { item: { label: string; children: NavL
   );
 }
 
-export function SiteHeader() {
+export function SiteHeader({ theme = "default" }: { theme?: "default" | "home-dark" }) {
   const [location] = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const mobileButtonRef = useRef<HTMLButtonElement>(null);
@@ -200,7 +200,7 @@ export function SiteHeader() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-brand-bg/90 backdrop-blur border-b border-black/5">
+    <header data-theme={theme} className="site-header sticky top-0 z-50 w-full bg-brand-bg/90 backdrop-blur border-b border-black/5">
       <div className="wrap h-20 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 shrink-0 min-h-[44px]" data-testid="link-home" aria-label="Instituto NoFront, ir para o início">
           <Globe className="w-8 h-8 shrink-0" aria-hidden />

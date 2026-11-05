@@ -325,3 +325,56 @@ h1, h2, h3, h4 {
 @media (max-width: 900px), (hover: none) {
   .parallax-bg { background-attachment: scroll; }
 }
+
+/* Home opening theme: scoped to the page shell that explicitly opts in. */
+.site-header[data-theme="home-dark"] {
+  background: var(--color-brand-preto);
+  color: var(--color-brand-bg);
+  border-bottom-color: color-mix(in srgb, var(--color-brand-bg) 16%, transparent);
+}
+.site-header[data-theme="home-dark"] a,
+.site-header[data-theme="home-dark"] button {
+  color: inherit;
+}
+.site-header[data-theme="home-dark"] nav a:hover,
+.site-header[data-theme="home-dark"] nav button:hover,
+.site-header[data-theme="home-dark"] nav a[aria-current="page"],
+.site-header[data-theme="home-dark"] nav button[aria-expanded="true"],
+.site-header[data-theme="home-dark"] nav button.text-brand-roxo {
+  color: var(--color-brand-dourado);
+}
+.site-header[data-theme="home-dark"] > .wrap > a {
+  color: var(--color-brand-bg);
+}
+.site-header[data-theme="home-dark"] .pill-btn {
+  background: var(--color-brand-dourado);
+  color: var(--color-brand-preto);
+}
+.site-header[data-theme="home-dark"] nav ul {
+  background: var(--color-brand-preto);
+  border-color: color-mix(in srgb, var(--color-brand-bg) 18%, transparent);
+  color: var(--color-brand-bg);
+}
+.site-header[data-theme="home-dark"] > nav[aria-label="Principal"] {
+  background: var(--color-brand-preto);
+  color: var(--color-brand-bg);
+  border-color: color-mix(in srgb, var(--color-brand-bg) 18%, transparent);
+}
+.site-header[data-theme="home-dark"] nav li,
+.site-header[data-theme="home-dark"] nav ul {
+  border-color: color-mix(in srgb, var(--color-brand-bg) 16%, transparent);
+}
+.site-header[data-theme="home-dark"] nav a:hover,
+.site-header[data-theme="home-dark"] nav a:focus,
+.site-header[data-theme="home-dark"] nav button:hover,
+.site-header[data-theme="home-dark"] nav button:focus {
+  background-color: color-mix(in srgb, var(--color-brand-bg) 8%, transparent);
+}
+.site-header[data-theme="home-dark"] nav .border-brand-orquidea\/40 {
+  border-color: color-mix(in srgb, var(--color-brand-orquidea) 50%, transparent);
+}
+.site-header[data-theme="home-dark"] :focus-visible {
+  outline-color: var(--color-brand-dourado);
+}
+
+#como-atuamos { scroll-margin-top: 80px; }

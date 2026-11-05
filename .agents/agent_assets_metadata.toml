@@ -84,3 +84,31 @@ mtime_ms = 1793887405409
 storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/2c0900d9-16f7-4f9c-8461-689de66c9639/30471a18-99e1-4747-9901-9c2b011fdf24"
 storage_version_token = "1793887451899777"
 content_type = "image/jpeg"
+
+[[outputs]]
+id = "8w4A560shbIAoJQG50bDr"
+uri = "file://generated-artifacts/abertura/inicio-1440.jpg"
+type = "image"
+title = "Nova abertura — computador 1440px"
+description = "Captura da abertura com cabeçalho escuro, título alternado, mosaico do símbolo oficial e faixa vermelha."
+logical_id = "00cf78af-f209-45b6-9b81-8c9a382ca4a7"
+content_hash = "sha256:67aec19f96fc207658136f94e7559fe43f384667297a7d57d46a6b3d57c02dad"
+size = 151855
+mtime_ms = 1793888862065
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/00cf78af-f209-45b6-9b81-8c9a382ca4a7/3328d31c-b672-4663-94e8-5b558f9075c6"
+storage_version_token = "1793888900490071"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "hsRAz1uUil5RhA7jTBmpE"
+uri = "file://generated-artifacts/abertura/inicio-390.jpg"
+type = "image"
+title = "Nova abertura — celular 390px"
+description = "Captura da versão móvel com botões empilhados e mosaico de seis blocos."
+logical_id = "35e72b2e-6bae-494d-9905-bb61b87ccd4d"
+content_hash = "sha256:eb1184f8492928e7d16f7e0f9592d1ecadc5ff8686da9d40a55f8ab774a5ea2e"
+size = 78005
+mtime_ms = 1793888863689
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/35e72b2e-6bae-494d-9905-bb61b87ccd4d/52ed7cf9-70d3-4c71-8d23-f2d6e89dccf8"
+storage_version_token = "1793888901265783"
+content_type = "image/jpeg"

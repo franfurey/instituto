@@ -1,53 +1,20 @@
 import { useEffect, useRef } from "react";
 import { Link } from "wouter";
-import { Globe, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import marchaMulheresNegrasImg from "@assets/marchamulheresnegras_1783012613504.jpg";
 import apoieBgVideo from "@/assets/video/apoie-bg.mp4";
 import apoieBgPoster from "@/assets/video/apoie-bg-poster.jpg";
 import paredeDeLambesImg from "@assets/Parede_de_lambes_1783025950378.png";
 import { PageShell } from "@/components/site/PageShell";
 import { Expandable } from "@/components/site/Expandable";
+import { AberturaSecao } from "@/components/AberturaSecao";
 import QuemSomosSecao from "@/components/QuemSomosSecao";
 import { useSeo } from "@/lib/use-seo";
-import { SUBSTACK_URL, VOLUNTARIA_URL } from "@/lib/site";
-
-const Hero = () => (
-  <section className="grid grid-cols-1 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:min-h-[88vh]">
-    <div className="bloco bloco-edge flex flex-col justify-center gap-4 bg-brand-roxo">
-      <p className="txt-rotulo text-white">Novos Futuros Econômicos</p>
-      <h1 className="txt-h1 text-white">
-        Uma economia justa precisa de outras vozes, conhecimentos e perspectivas
-      </h1>
-    </div>
-    <div className="flex flex-col">
-      <div className="bg-brand-bg bloco flex-1 flex flex-col justify-center items-start gap-8">
-        <Globe className="w-20 h-20 md:w-28 md:h-28 text-brand-preto" strokeWidth={1} aria-hidden />
-        <p className="txt-destaque font-medium" data-testid="text-hero-intro">
-          O <strong>Instituto NoFront</strong> atua para ampliar a presença e a influência de perspectivas feministas negras e antirracistas nas agendas econômicas no Brasil e no Sul Global.
-        </p>
-      </div>
-      <div className="grid grid-cols-2 min-h-[160px] md:min-h-0 md:flex-1 relative">
-        <div className="bg-brand-roxo/40" />
-        <div className="relative overflow-hidden bg-white">
-          <div className="absolute inset-0" style={{ backgroundImage: "repeating-linear-gradient(45deg, var(--color-brand-bg) 0px, var(--color-brand-bg) 8px, var(--color-brand-roxo) 8px, var(--color-brand-roxo) 16px, var(--color-brand-preto) 16px, var(--color-brand-preto) 24px)" }} />
-          <div className="absolute inset-0 bg-brand-preto/50 flex items-center justify-center p-4">
-            <span className="txt-h3 text-white text-center">Incidência<br />Política</span>
-          </div>
-        </div>
-        {/* TODO: destino de "Seja voluntária" (VOLUNTARIA_URL em src/lib/site.ts). Enquanto vazio, o botão fica oculto. */}
-        {VOLUNTARIA_URL && (
-          <div className="col-span-2 bg-brand-roxo/20 flex items-end justify-end p-6 min-h-[128px]">
-            <a href={VOLUNTARIA_URL} target="_blank" rel="noopener noreferrer" className="pill-btn" data-testid="btn-volunteer">Seja voluntária <ArrowUpRight className="w-5 h-5" aria-hidden /></a>
-          </div>
-        )}
-      </div>
-    </div>
-  </section>
-);
+import { SUBSTACK_URL } from "@/lib/site";
 
 const ComoAtuamos = () => (
   <>
-    <section className="sec bg-brand-bg">
+    <section id="como-atuamos" className="sec bg-brand-bg">
       <div className="wrap stack">
         <h2 className="txt-h2">Como atuamos</h2>
         <p className="txt-destaque">
@@ -245,8 +212,8 @@ export default function Home() {
     "O Instituto NoFront atua para ampliar a presença e a influência de perspectivas feministas negras e antirracistas nas agendas econômicas no Brasil e no Sul Global.",
   );
   return (
-    <PageShell>
-      <Hero />
+    <PageShell headerTheme="home-dark">
+      <AberturaSecao />
       <QuemSomosSecao />
       <ComoAtuamos />
       <PhotoBand />
