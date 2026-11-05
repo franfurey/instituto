@@ -86,6 +86,65 @@ export default function NossaVisao() {
         </div>
       </section>
 
+      <section className="sec bg-brand-bg">
+        <div className="wrap flex flex-col gap-12">
+          <div className="flex flex-col gap-4 max-w-3xl">
+            <h2 className="txt-h2">Como atuamos</h2>
+            <p className={P}>Desenvolvemos nossa atuação em três frentes integradas: <em>Pesquisa e Produção de Conhecimento, Incidência Política e Formação Econômica.</em></p>
+            <p className={P}>Essas frentes se articulam para produzir e fazer circular conhecimentos, fortalecer capacidades e ampliar a influência de mulheres negras e de perspectivas antirracistas sobre o debate e as decisões econômicas.</p>
+            <p className={P}><strong>Disputamos narrativas.</strong> Por isso, a comunicação atravessa toda a nossa atuação. Por meio dela, traduzimos dados e formulações, ampliamos sua circulação pública e contribuímos para que outros problemas, sujeitos e alternativas ganhem espaço no debate econômico.</p>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <article id="pesquisa" className="bg-brand-vermelho bloco text-white scroll-mt-[100px]" style={{ scrollMarginTop: "100px" }} data-testid="frente-pesquisa">
+              <div className="grid grid-cols-1 lg:grid-cols-[minmax(240px,0.7fr)_minmax(0,1.3fr)] gap-8 lg:gap-16">
+                <div>
+                  <p className="txt-rotulo text-white/70 mb-4">01</p>
+                  <h3 className="txt-h3">Pesquisa e Produção de Conhecimento</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <p className={P}>Produzimos pesquisas, análises e formulações sobre macroeconomia, política fiscal, política monetária, trabalho, cuidado e desenvolvimento a partir de perspectivas feministas negras, antirracistas e ancoradas no Sul Global.</p>
+                  <p className={P}>Partimos da constatação de que os modelos, indicadores e narrativas predominantes frequentemente tratam como universais experiências que não o são. Com isso, deixam em segundo plano os efeitos diferenciados das decisões econômicas sobre mulheres negras, populações periféricas e outros grupos historicamente marginalizados.</p>
+                  <p className={P}>Nosso trabalho investiga como decisões aparentemente abstratas — como a definição das taxas de juros, as regras fiscais, as prioridades orçamentárias e os mecanismos de financiamento — atravessam o emprego, a renda, o endividamento, os serviços públicos, o trabalho de cuidado e as possibilidades de desenvolvimento, <strong>evidenciando como esses impactos se distribuem de forma desigual segundo raça, classe e gênero.</strong></p>
+                  <p className={P}>Produzimos boletins econômicos, estudos temáticos, análises de conjuntura e outros materiais destinados a pesquisadoras, jornalistas, organizações da sociedade civil, agentes públicos e demais pessoas interessadas em compreender e transformar a economia brasileira.</p>
+                </div>
+              </div>
+            </article>
+
+            <article id="incidencia" className="bg-brand-orquidea bloco text-white scroll-mt-[100px]" style={{ scrollMarginTop: "100px" }} data-testid="frente-incidencia">
+              <div className="grid grid-cols-1 lg:grid-cols-[minmax(240px,0.7fr)_minmax(0,1.3fr)] gap-8 lg:gap-16">
+                <div>
+                  <p className="txt-rotulo text-white/70 mb-4">02</p>
+                  <h3 className="txt-h3">Incidência Política</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <p className={P}><strong>Transformamos conhecimento em ação pública.</strong> Mobilizamos pesquisas, dados, análises e propostas para influenciar narrativas, agendas institucionais, políticas públicas e processos de decisão.</p>
+                  <p className={P}>Nossa atuação busca ampliar a presença e a influência de mulheres negras nos espaços onde a economia é discutida e decidida, aproximando produção intelectual, articulação política, comunicação estratégica e formulação de alternativas.</p>
+                  <p className={P}>Atuamos junto a parlamentares, agentes públicos, organizações da sociedade civil, instituições financeiras e de desenvolvimento, organismos multilaterais e outros atores estratégicos. Levamos para esses espaços análises e propostas relacionadas ao orçamento público, à política fiscal, à política monetária, ao financiamento do desenvolvimento e a outros temas centrais para a justiça econômica.</p>
+                  <p className={P}>Também participamos da <strong>disputa pública sobre os sentidos e as prioridades da economia.</strong> Dialogamos com a imprensa, comunicadoras, formadores de opinião e organizações parceiras para tornar visíveis os efeitos distributivos das decisões econômicas e deslocar para o centro do debate questões historicamente tratadas como periféricas.</p>
+                  <p className={P}>O <Link href="/projetos/manifesto" className="underline underline-offset-4 font-bold" data-testid="link-frente-manifesto">Manifesto Econômico da Marcha das Mulheres Negras</Link> é uma referência programática central dessa atuação. A partir dele, contribuímos para transformar demandas e conhecimentos construídos pelo movimento de mulheres negras em argumentos, propostas e estratégias de incidência.</p>
+                </div>
+              </div>
+            </article>
+
+            <article id="formacao" className="bg-brand-preto bloco text-white scroll-mt-[100px]" style={{ scrollMarginTop: "100px" }} data-testid="frente-formacao">
+              <div className="grid grid-cols-1 lg:grid-cols-[minmax(240px,0.7fr)_minmax(0,1.3fr)] gap-8 lg:gap-16">
+                <div>
+                  <p className="txt-rotulo text-brand-dourado mb-4">03</p>
+                  <h3 className="txt-h3 text-brand-dourado">Formação Econômica</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <p className={P}>Promovemos formação econômica crítica e política para <strong>ampliar quem pode compreender, formular e disputar os rumos da economia.</strong></p>
+                  <p className={P}><strong>Economia é um campo de poder.</strong> Participar dessa disputa exige acesso a conceitos, dados, linguagens e instrumentos historicamente concentrados em instituições e grupos masculinos e brancos. Uma fotografia que não dialoga com a realidade brasileira em sua diversidade racial, de classe e de gênero. Formamos pessoas para ampliar as possibilidades de atores que decidem o rumo da economia brasileira.</p>
+                  <p className={P}>Nossos processos formativos relacionam <strong>experiências, fundamentos econômicos, leitura crítica de dados, análise de conjuntura, construção coletiva de alternativas, comunicação e incidência</strong>. Mais do que transmitir conteúdos, criamos condições para que as pessoas construam interpretações próprias e <strong>mobilizem esses conhecimentos em seus territórios, organizações, movimentos e espaços de atuação</strong>.</p>
+                  <p className={P}>Atuamos prioritariamente com <strong>mulheres negras, lideranças e ativistas</strong> de movimentos sociais, organizações da sociedade civil, coletivos e redes. Também desenvolvemos percursos com <strong>pesquisadoras, comunicadoras, agentes públicos</strong> e outros sujeitos comprometidos com a transformação das estruturas que produzem desigualdades e com a <strong>construção de uma economia orientada pelo bem viver.</strong></p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="sec bg-brand-preto text-white on-dark">
         <div className="wrap flex flex-col gap-12">
           <div className="flex flex-col gap-6 max-w-3xl">

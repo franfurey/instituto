@@ -4,80 +4,61 @@ import { ArrowUpRight } from "lucide-react";
 import marchaMulheresNegrasImg from "@assets/marchamulheresnegras_1783012613504.jpg";
 import apoieBgVideo from "@/assets/video/apoie-bg.mp4";
 import apoieBgPoster from "@/assets/video/apoie-bg-poster.jpg";
-import paredeDeLambesImg from "@assets/Parede_de_lambes_1783025950378.png";
 import { PageShell } from "@/components/site/PageShell";
-import { Expandable } from "@/components/site/Expandable";
 import { AberturaSecao } from "@/components/AberturaSecao";
+import ManifestoBanner from "@/components/ManifestoBanner";
 import QuemSomosSecao from "@/components/QuemSomosSecao";
 import { useSeo } from "@/lib/use-seo";
 import { SUBSTACK_URL } from "@/lib/site";
 
 const ComoAtuamos = () => (
   <>
-    <section id="como-atuamos" className="sec bg-brand-bg">
-      <div className="wrap stack">
-        <h2 className="txt-h2">Como atuamos</h2>
-        <p className="txt-destaque">
-          Desenvolvemos nossa atuação em três frentes integradas: <em>Pesquisa e Produção de Conhecimento, Incidência Política e Formação Econômica.</em>
-        </p>
-        <p className="txt-corpo text-brand-preto/80">
-          Essas frentes se articulam para produzir e fazer circular conhecimentos, fortalecer capacidades e ampliar a influência de mulheres negras e de perspectivas antirracistas sobre o debate e as decisões econômicas.
-        </p>
+    <section id="como-atuamos" className="bg-brand-bg pt-[var(--sec-y)]">
+      <div className="wrap pb-12">
+        <div className="flex flex-col gap-4">
+          <p className="txt-rotulo text-brand-roxo">como atuamos</p>
+          <h2 className="txt-h2">Três frentes integradas</h2>
+          <p className="txt-corpo max-w-[65ch]">
+            Desenvolvemos nossa atuação em três frentes integradas: Pesquisa e Produção de Conhecimento, Incidência Política e Formação Econômica.
+          </p>
+        </div>
       </div>
-    </section>
-    <section id="pilares" className="grid grid-cols-1 lg:grid-cols-3">
-      <article className="bg-brand-vermelho bloco bloco-edge flex flex-col gap-6 text-white" data-testid="pilar-pesquisa">
-        <h3 className="txt-h3 uppercase text-white">Pesquisa e Produção de Conhecimento</h3>
-        <Expandable
-          testId="btn-leia-mais-pesquisa"
-          buttonClassName="!bg-white !text-brand-preto"
-          intro={<p>Produzimos pesquisas, análises e formulações sobre macroeconomia, política fiscal, política monetária, trabalho, cuidado e desenvolvimento a partir de perspectivas feministas negras, antirracistas e ancoradas no Sul Global.</p>}
-          rest={
-            <>
-              <p>Partimos da constatação de que os modelos, indicadores e narrativas predominantes frequentemente tratam como universais experiências que não o são. Com isso, deixam em segundo plano os efeitos diferenciados das decisões econômicas sobre mulheres negras, populações periféricas e outros grupos historicamente marginalizados.</p>
-              <p>Nosso trabalho investiga como decisões aparentemente abstratas — como a definição das taxas de juros, as regras fiscais, as prioridades orçamentárias e os mecanismos de financiamento — atravessam o emprego, a renda, o endividamento, os serviços públicos, o trabalho de cuidado e as possibilidades de desenvolvimento, <strong>evidenciando como esses impactos se distribuem de forma desigual segundo raça, classe e gênero.</strong></p>
-              <p>Produzimos boletins econômicos, estudos temáticos, análises de conjuntura e outros materiais destinados a pesquisadoras, jornalistas, organizações da sociedade civil, agentes públicos e demais pessoas interessadas em compreender e transformar a economia brasileira.</p>
-            </>
-          }
-        />
-      </article>
-      <article className="bg-brand-orquidea bloco flex flex-col gap-6 text-white" data-testid="pilar-incidencia">
-        <h3 className="txt-h3 uppercase text-white">Incidência<br />Política</h3>
-        <Expandable
-          testId="btn-leia-mais-incidencia"
-          intro={<p><strong>Transformamos conhecimento em ação pública.</strong> Mobilizamos pesquisas, dados, análises e propostas para influenciar narrativas, agendas institucionais, políticas públicas e processos de decisão.</p>}
-          rest={
-            <>
-              <p>Nossa atuação busca ampliar a presença e a influência de mulheres negras nos espaços onde a economia é discutida e decidida, aproximando produção intelectual, articulação política, comunicação estratégica e formulação de alternativas.</p>
-              <p>Atuamos junto a parlamentares, agentes públicos, organizações da sociedade civil, instituições financeiras e de desenvolvimento, organismos multilaterais e outros atores estratégicos. Levamos para esses espaços análises e propostas relacionadas ao orçamento público, à política fiscal, à política monetária, ao financiamento do desenvolvimento e a outros temas centrais para a justiça econômica.</p>
-              <p>Também participamos da <strong>disputa pública sobre os sentidos e as prioridades da economia.</strong> Dialogamos com a imprensa, comunicadoras, formadores de opinião e organizações parceiras para tornar visíveis os efeitos distributivos das decisões econômicas e deslocar para o centro do debate questões historicamente tratadas como periféricas.</p>
-              <p>O <Link href="/projetos/manifesto" className="underline underline-offset-4 font-bold" data-testid="link-pilar-manifesto">Manifesto Econômico da Marcha das Mulheres Negras</Link> é uma referência programática central dessa atuação. A partir dele, contribuímos para transformar demandas e conhecimentos construídos pelo movimento de mulheres negras em argumentos, propostas e estratégias de incidência.</p>
-            </>
-          }
-        />
-      </article>
-      <article className="bg-brand-preto bloco flex flex-col gap-6 text-white" data-testid="pilar-formacao">
-        <h3 className="txt-h3 uppercase text-brand-dourado">Formação<br />Econômica</h3>
-        <Expandable
-          testId="btn-leia-mais-formacao"
-          buttonClassName="!bg-white !text-brand-preto"
-          intro={<p>Promovemos formação econômica crítica e política para <strong>ampliar quem pode compreender, formular e disputar os rumos da economia.</strong></p>}
-          rest={
-            <>
-              <p><strong>Economia é um campo de poder.</strong> Participar dessa disputa exige acesso a conceitos, dados, linguagens e instrumentos historicamente concentrados em instituições e grupos masculinos e brancos. Uma fotografia que não dialoga com a realidade brasileira em sua diversidade racial, de classe e de gênero. Formamos pessoas para ampliar as possibilidades de atores que decidem o rumo da economia brasileira.</p>
-              <p>Nossos processos formativos relacionam <strong>experiências, fundamentos econômicos, leitura crítica de dados, análise de conjuntura, construção coletiva de alternativas, comunicação e incidência</strong>. Mais do que transmitir conteúdos, criamos condições para que as pessoas construam interpretações próprias e <strong>mobilizem esses conhecimentos em seus territórios, organizações, movimentos e espaços de atuação</strong>.</p>
-              <p>Atuamos prioritariamente com <strong>mulheres negras, lideranças e ativistas</strong> de movimentos sociais, organizações da sociedade civil, coletivos e redes. Também desenvolvemos percursos com <strong>pesquisadoras, comunicadoras, agentes públicos</strong> e outros sujeitos comprometidos com a transformação das estruturas que produzem desigualdades e com a <strong>construção de uma economia orientada pelo bem viver.</strong></p>
-            </>
-          }
-        />
-      </article>
-    </section>
-    <section className="bg-brand-dourado sec">
-      <div className="wrap">
-      <p className="txt-destaque text-brand-preto font-medium">
-        <strong className="txt-h2 block mb-4">Disputamos narrativas.</strong>
-        Por isso, a comunicação atravessa toda a nossa atuação. Por meio dela, traduzimos dados e formulações, ampliamos sua circulação pública e contribuímos para que outros problemas, sujeitos e alternativas ganhem espaço no debate econômico.
-      </p>
+      <div id="pilares" className="grid grid-cols-1 lg:grid-cols-3">
+        <article className="bg-brand-vermelho flex flex-col px-6 py-10 lg:p-16 text-white" data-testid="pilar-pesquisa">
+          <span className="txt-rotulo text-white/70">01</span>
+          <h3 className="txt-h3 mt-4 text-white">Pesquisa e Produção de Conhecimento</h3>
+          <p className="txt-corpo mt-6 max-w-[40ch] text-white">
+            Produzimos pesquisas, análises e formulações sobre macroeconomia, política fiscal, política monetária, trabalho, cuidado e desenvolvimento a partir de perspectivas feministas negras, antirracistas e ancoradas no Sul Global.
+          </p>
+          <Link href="/sobre/nossa-visao#pesquisa" className="mt-auto pt-8 font-anton text-base text-white underline decoration-transparent decoration-2 underline-offset-4 hover:decoration-current" data-testid="link-saiba-mais-pesquisa">
+            Saiba mais →
+          </Link>
+        </article>
+        <article className="bg-brand-orquidea flex flex-col px-6 py-10 lg:p-16 text-white" data-testid="pilar-incidencia">
+          <span className="txt-rotulo text-white/70">02</span>
+          <h3 className="txt-h3 mt-4 text-white">Incidência Política</h3>
+          <p className="txt-corpo mt-6 max-w-[40ch] text-white">
+            <strong>Transformamos conhecimento em ação pública.</strong> Mobilizamos pesquisas, dados, análises e propostas para influenciar narrativas, agendas institucionais, políticas públicas e processos de decisão.
+          </p>
+          <Link href="/sobre/nossa-visao#incidencia" className="mt-auto pt-8 font-anton text-base text-white underline decoration-transparent decoration-2 underline-offset-4 hover:decoration-current" data-testid="link-saiba-mais-incidencia">
+            Saiba mais →
+          </Link>
+        </article>
+        <article className="bg-brand-preto flex flex-col px-6 py-10 lg:p-16 text-white" data-testid="pilar-formacao">
+          <span className="txt-rotulo text-brand-dourado">03</span>
+          <h3 className="txt-h3 mt-4 text-brand-dourado">Formação Econômica</h3>
+          <p className="txt-corpo mt-6 max-w-[40ch] text-white">
+            Promovemos formação econômica crítica e política para <strong>ampliar quem pode compreender, formular e disputar os rumos da economia.</strong>
+          </p>
+          <Link href="/sobre/nossa-visao#formacao" className="mt-auto pt-8 font-anton text-base text-brand-dourado underline decoration-transparent decoration-2 underline-offset-4 hover:decoration-current" data-testid="link-saiba-mais-formacao">
+            Saiba mais →
+          </Link>
+        </article>
+      </div>
+      <div className="flex justify-center py-12">
+        <Link href="/sobre/nossa-visao" className="pill-btn" style={{ height: 52, minHeight: 52, paddingInline: 24, backgroundColor: "var(--color-brand-roxo)", maxWidth: "calc(100vw - 48px)" }} data-testid="btn-conheca-nossa-visao">
+          Conheça nossa visão de transformação
+        </Link>
       </div>
     </section>
   </>
@@ -93,32 +74,13 @@ const PhotoBand = () => (
   />
 );
 
-const ManifestoDestaque = () => (
-  <section className="grid grid-cols-1 lg:grid-cols-2">
-    <div className="bg-brand-bg bloco bloco-edge stack flex flex-col justify-center txt-corpo">
-      <h2 className="txt-h2">O Manifesto Econômico da Marcha das Mulheres Negras ocupa um lugar central em nossa estratégia.</h2>
-      <p>Sintetiza um projeto político e ético construído pelas mulheres negras do Brasil. Elaborado no segundo semestre de 2025, a partir de uma <strong>escuta multimodal que envolveu mais de 300 mulheres negras</strong>, o documento reúne <strong>diagnósticos, demandas e propostas</strong> que buscam <strong>superar um modelo de organização social baseado na exploração, na desigualdade e no esgotamento da vida e do meio ambiente.</strong></p>
-      <p>Colocamos a raça no centro do debate econômico porque compreendemos que <strong>o racismo estrutura a distribuição do trabalho, da renda, da riqueza, do cuidado, dos recursos públicos e do poder, prejudicando sistematicamente a população negra</strong>. É parte fundamental do projeto econômico que organizou o Brasil e que ainda define quem sustenta a sociedade, quem se beneficia de sua riqueza e quem participa das decisões sobre seus rumos.</p>
-      <p><strong>Mas um manifesto, sozinho, não transforma a realidade. Suas propostas precisam ser compreendidas, apropriadas e mobilizadas nas disputas concretas.</strong> Por isso, buscamos criar condições para que lideranças negras relacionem o Manifesto às questões que atravessam seus territórios e suas organizações — da discussão sobre o orçamento municipal à leitura crítica das decisões econômicas anunciadas diariamente.</p>
-      <p>Ao fortalecer essa capacidade, contribuímos para a construção de um arranjo social verdadeiramente humano, no qual <strong>a economia esteja a serviço da vida, do cuidado, da dignidade e da sustentabilidade</strong>, e não da exploração de pessoas e territórios.</p>
-      <Link href="/projetos/manifesto" className="pill-btn self-start acoes" data-testid="btn-conheca-manifesto">
-        Conheça o Manifesto <ArrowUpRight className="w-5 h-5" aria-hidden />
-      </Link>
-    </div>
-    <div className="min-h-[50vh] relative">
-      <img src={paredeDeLambesImg} alt="Parede coberta de lambes (cartazes colados) do Instituto NoFront" loading="lazy" className="absolute inset-0 w-full h-full object-cover" data-testid="img-stats-lambes" />
-    </div>
-  </section>
-);
-
 const NUMEROS = [
-  { n: "+300", t: "mulheres negras ouvidas", bg: "bg-brand-roxo text-white" },
   { n: "+200", t: "mulheres inscritas em nossos programas", bg: "bg-brand-vermelho text-white" },
   { n: "6", t: "boletins econômicos produzidos", bg: "bg-brand-preto text-brand-dourado" },
 ];
 
 const Numeros = () => (
-  <section aria-label="Números de impacto" className="grid grid-cols-1 md:grid-cols-3">
+  <section aria-label="Números de impacto" className="grid grid-cols-1 md:grid-cols-2">
     {NUMEROS.map((x, i) => (
       <div key={x.n} className={`${x.bg} bloco flex flex-col gap-4`} data-testid={`stat-${i}`}>
         <span className="font-anton text-6xl md:text-8xl leading-none pt-2">{x.n}</span>
@@ -217,7 +179,7 @@ export default function Home() {
       <QuemSomosSecao />
       <ComoAtuamos />
       <PhotoBand />
-      <ManifestoDestaque />
+      <ManifestoBanner />
       <Numeros />
       <VideoCta />
       <Insights />

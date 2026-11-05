@@ -259,9 +259,6 @@ main .grid > *, main article, main section { min-width: 0; }
 p, li, blockquote p { text-wrap: pretty; }
 main p, main li { max-width: 65ch; }
 main p { text-align: left; }
-@media (min-width: 1024px) {
-  #pilares > article > h3 { min-height: 4lh; }
-}
 .txt-destaque { max-width: 65ch; }
 h1, h2, h3, h4 {
   overflow-wrap: normal;

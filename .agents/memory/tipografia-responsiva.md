@@ -14,3 +14,9 @@ Escalas próprias de um componente devem usar seletores escopados; seus modifica
 **Why:** a ordem dos estilos globais e dos componentes pode fazer as classes `.txt-*` prevalecerem sobre tamanhos locais. Aumentar só a especificidade da regra-base também pode apagar a borda de um botão secundário.
 
 **How to apply:** conferir o resultado renderizado, não apenas os valores declarados. Ao reforçar a regra-base, preservar a precedência dos modificadores existentes.
+
+A navegação por âncoras deve aguardar as fontes antes de medir o destino e ter um único responsável pela rolagem.
+
+**Why:** o carregamento da Ogonek muda a altura dos blocos; uma rolagem local também pode competir com o retorno ao topo do roteador, deixando o destino errado.
+
+**How to apply:** preservar a coordenação central de rolagem, o desconto do cabeçalho e a preferência por movimento reduzido. Nas capturas, aguardar a rolagem suave terminar.

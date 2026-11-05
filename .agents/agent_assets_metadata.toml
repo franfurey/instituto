@@ -140,3 +140,73 @@ mtime_ms = 1793889322873
 storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/de92f07b-941a-4f4b-aec9-3ec4a5cb3e86/82ed3ba9-bde5-49c5-a354-a02f81d38c36"
 storage_version_token = "1793889334890011"
 content_type = "image/jpeg"
+
+[[outputs]]
+id = "vKebYNJ3EwTTMUAlkh1OK"
+uri = "file://generated-artifacts/manifesto-banner/banner-1440.jpg"
+type = "image"
+title = "Banner do Manifesto — computador"
+description = "Captura da seção na janela de 1440px."
+logical_id = "d23de734-b18b-4858-8906-2431b994290b"
+content_hash = "sha256:005c1ebd7f305b961d849a79bf865d64e3315506704e3e851037c877561f5a88"
+size = 201744
+mtime_ms = 1793890512561
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/d23de734-b18b-4858-8906-2431b994290b/cf649f37-8070-489c-82b2-a74d3b06eb8e"
+storage_version_token = "1793890640701153"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "px3BCVnrmcWDk2aV7aZ9t"
+uri = "file://generated-artifacts/manifesto-banner/banner-390.jpg"
+type = "image"
+title = "Banner do Manifesto — celular"
+description = "Captura completa da seção na janela de 390px."
+logical_id = "42572ac2-6d74-4df0-a271-67930e44da62"
+content_hash = "sha256:edcdd14031df3812ac4c2e5785ba422d25436cdeaf56f3b0b3aa7cffa70b02ca"
+size = 83579
+mtime_ms = 1793890571974
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/42572ac2-6d74-4df0-a271-67930e44da62/3951da99-f655-4554-bc50-16d57bf748fe"
+storage_version_token = "1793890641357395"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "8ZpxcyR69SdgpDUiiFYhb"
+uri = "file://generated-artifacts/como-atuamos/secao-1440.jpg"
+type = "image"
+title = "Como atuamos — computador"
+description = "Seção com resumos e links alinhados, em 1440px."
+logical_id = "f88be1d7-7867-4e20-b881-f0b729aff868"
+content_hash = "sha256:4c04ca118bb97ed7f9945adc7906edf4a9668a3520bde3b7078fdb9d774500a6"
+size = 132268
+mtime_ms = 1793890632361
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/f88be1d7-7867-4e20-b881-f0b729aff868/95c715a7-5a36-45a2-90fe-6673490c3924"
+storage_version_token = "1793890642040628"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "GJSu_8Utxjf1RSRqFkH01"
+uri = "file://generated-artifacts/como-atuamos/secao-390.jpg"
+type = "image"
+title = "Como atuamos — celular"
+description = "Seção completa em coluna, na janela de 390px."
+logical_id = "6ab88988-0314-49d5-b30d-825f996ca63d"
+content_hash = "sha256:f48640c71546ef62c8b62d0775ad572c739b1cceeee81c0dcb99f1a0f7107838"
+size = 123399
+mtime_ms = 1793890558750
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/6ab88988-0314-49d5-b30d-825f996ca63d/3cdba72f-bddb-42ee-ad49-d4932a154660"
+storage_version_token = "1793890642824316"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "Ra9DPh5_80I5_3QRXEUwQ"
+uri = "file://generated-artifacts/como-atuamos/nossa-visao-formacao.jpg"
+type = "image"
+title = "Nossa visão — Formação Econômica"
+description = "Bloco completo aberto pelo link #formacao; posição confirmada abaixo do cabeçalho."
+logical_id = "2bae24b0-db3d-42c0-9e2e-1ba624216e87"
+content_hash = "sha256:ba368827c741f82bc9b80100db695704e336a93e4d99134e45483b249df4e35b"
+size = 171474
+mtime_ms = 1793890498509
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/2bae24b0-db3d-42c0-9e2e-1ba624216e87/31fb8561-8ef2-499e-9929-86e22e6c417c"
+storage_version_token = "1793890643548681"
+content_type = "image/jpeg"
