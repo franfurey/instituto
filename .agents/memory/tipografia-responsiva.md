@@ -8,3 +8,9 @@ Usar a escala tipográfica oficial como referência, mas permitir redução pont
 **Why:** a Ogonek Unicase tem palavras longas que ultrapassam colunas divididas e celulares mesmo nos tamanhos prescritos. Na revisão, manter simultaneamente tamanho fixo, texto integral e palavra sem corte era impossível nesses casos.
 
 **How to apply:** não hifenizar, cortar, condensar visualmente nem reescrever os títulos para fazê-los caber. Ajustar primeiro o layout; quando necessário, ajustar somente o título afetado com as métricas da fonte carregada, mantendo intacta a escala do restante do texto.
+
+Escalas próprias de um componente devem usar seletores escopados; seus modificadores de cor e borda precisam ter especificidade equivalente à regra-base.
+
+**Why:** a ordem dos estilos globais e dos componentes pode fazer as classes `.txt-*` prevalecerem sobre tamanhos locais. Aumentar só a especificidade da regra-base também pode apagar a borda de um botão secundário.
+
+**How to apply:** conferir o resultado renderizado, não apenas os valores declarados. Ao reforçar a regra-base, preservar a precedência dos modificadores existentes.

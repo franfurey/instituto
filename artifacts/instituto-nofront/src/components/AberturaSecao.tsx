@@ -1,5 +1,4 @@
 import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from "react";
-import { Link } from "wouter";
 import { SimboloNoFront } from "@/components/SimboloNoFront";
 import "./AberturaSecao.css";
 
@@ -44,14 +43,18 @@ function useWordSize(titleRef: RefObject<HTMLHeadingElement | null>, rowRef: Ref
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         const css = getComputedStyle(title);
-        const base = parseFloat(css.fontSize);
+        const base = Math.min(52, Math.max(34, window.innerWidth * 0.036));
         context.font = `${css.fontStyle} ${css.fontWeight} ${base}px ${css.fontFamily}`;
         const widest = Math.max(...WORDS.map((word) => context.measureText(word).width));
         const chip = row.querySelector<HTMLElement>(".abertura-word");
         const chipCss = chip && getComputedStyle(chip);
         const padding = chipCss ? parseFloat(chipCss.paddingLeft) + parseFloat(chipCss.paddingRight) : 24;
         const available = Math.max(0, row.clientWidth - padding - 2);
-        if (widest && available) setSize(Math.min(base, base * available / widest));
+        const firstLine = context.measureText("uma economia justa").width;
+        const desktopFit = window.innerWidth > 768 && firstLine
+          ? base * Math.max(0, title.clientWidth - 2) / firstLine
+          : base;
+        if (widest && available) setSize(Math.min(base, base * available / widest, desktopFit));
       });
     };
     const observer = new ResizeObserver(measure);
@@ -108,14 +111,14 @@ export function AberturaSecao() {
       <div className="abertura-main">
         <div className="abertura-copy">
           <p className="txt-rotulo abertura-label">novos futuros econômicos</p>
-          <h1 id="abertura-titulo" ref={titleRef} className="txt-h1 abertura-title">
+          <h1 id="abertura-titulo" ref={titleRef} className="txt-h1 abertura-title" style={wordSize ? { fontSize: `${wordSize}px` } : undefined}>
             <span className="sr-only">
               Uma economia justa precisa de outras vozes, conhecimentos e perspectivas
             </span>
             <span className="abertura-title-visible" aria-hidden="true">
-              <span className="abertura-fixed">uma economia justa <span className="abertura-fixed-end">precisa de</span></span>
+              <span className="abertura-fixed"><span className="abertura-first-line">uma <span className="abertura-fixed-end">economia justa</span></span><br className="abertura-desktop-break" />{" "}<span className="abertura-fixed-end">precisa de</span></span>
               <span ref={rowRef} className="abertura-word-row">
-                <span key={word} className={`abertura-word word-${step % WORDS.length}`} style={wordSize ? { fontSize: `${wordSize}px` } : undefined}>
+                <span key={word} className={`abertura-word word-${step % WORDS.length}`}>
                   {word}
                 </span>
               </span>
@@ -132,9 +135,6 @@ export function AberturaSecao() {
             O <strong>Instituto NoFront</strong> atua para ampliar a presença e a influência de perspectivas feministas negras e antirracistas nas agendas econômicas no Brasil e no Sul Global.
           </p>
           <div className="abertura-actions">
-            <Link href="/projetos/manifesto" className="abertura-button abertura-button-primary">
-              Conheça o manifesto ↗
-            </Link>
             <a className="abertura-button abertura-button-secondary" href="#como-atuamos">
               Como atuamos
             </a>

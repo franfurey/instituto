@@ -349,7 +349,21 @@ h1, h2, h3, h4 {
 .site-header[data-theme="home-dark"] .pill-btn {
   background: var(--color-brand-dourado);
   color: var(--color-brand-preto);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  height: 44px;
+  min-height: 44px;
+  line-height: 1;
+  padding-top: 2px;
+  padding-bottom: 0;
 }
+.site-header[data-theme="home-dark"] > .wrap > a > span { font-size: 22px; }
+.site-header[data-theme="home-dark"] nav,
+.site-header[data-theme="home-dark"] nav a,
+.site-header[data-theme="home-dark"] nav button { font-size: 16px; }
+.site-header[data-theme="home-dark"] nav .pill-btn { font-size: 15px; }
 .site-header[data-theme="home-dark"] nav ul {
   background: var(--color-brand-preto);
   border-color: color-mix(in srgb, var(--color-brand-bg) 18%, transparent);

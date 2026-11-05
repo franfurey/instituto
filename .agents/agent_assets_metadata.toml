@@ -112,3 +112,31 @@ mtime_ms = 1793888863689
 storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/35e72b2e-6bae-494d-9905-bb61b87ccd4d/52ed7cf9-70d3-4c71-8d23-f2d6e89dccf8"
 storage_version_token = "1793888901265783"
 content_type = "image/jpeg"
+
+[[outputs]]
+id = "MftQEicjU5VU9bOqyvEXR"
+uri = "file://generated-artifacts/abertura/tipografia-1440.jpg"
+type = "image"
+title = "Abertura ajustada — 1440px"
+description = "Tipografia reduzida e botões visíveis na primeira tela."
+logical_id = "5e381a4b-8157-47f1-bd8d-34eb5e927748"
+content_hash = "sha256:82250b3fad87bc959cb964e5550fe0d15571a1ef21b3f97b7acc3d5471bb8146"
+size = 131367
+mtime_ms = 1793889321285
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/5e381a4b-8157-47f1-bd8d-34eb5e927748/6d863a0d-f445-4a1d-94b5-266954596fde"
+storage_version_token = "1793889334220289"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "GK7uWCK0vJwKXBcYQRgQI"
+uri = "file://generated-artifacts/abertura/tipografia-390.jpg"
+type = "image"
+title = "Abertura ajustada — 390px"
+description = "Versão móvel com tipografia e espaçamentos ajustados."
+logical_id = "de92f07b-941a-4f4b-aec9-3ec4a5cb3e86"
+content_hash = "sha256:c5dcb5a022fe27a324f630cd1c4c4f51af03ae5d8e1dcec28dde53686a9e9dc7"
+size = 65708
+mtime_ms = 1793889322873
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c00654b9-f5a6-43f5-85ab-9aaa4ab3c1ab/de92f07b-941a-4f4b-aec9-3ec4a5cb3e86/82ed3ba9-bde5-49c5-a354-a02f81d38c36"
+storage_version_token = "1793889334890011"
+content_type = "image/jpeg"
